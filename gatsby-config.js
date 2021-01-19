@@ -40,10 +40,14 @@ module.exports = {
               "https://fonts.googleapis.com/css2?family=PT+Serif&display=swap",
             name: "PT Serif",
           },
+          {
+            file: "https://use.typekit.net/ujo8xej.css",
+            name: "Industry",
+          },
         ],
         custom: [
           {
-            name: "Inter",
+            name: "Open Sans",
             file: "/fonts/fonts.css",
           },
         ],

@@ -1,0 +1,40 @@
+.hero {
+    position: relative;
+    height: fit-content;
+    display: grid;
+
+    .hero-image {
+        display: grid;
+        padding: 300px 0;
+        @media (max-width: 767px) {
+            padding: 200px 0;
+        }
+        place-items: center;
+
+        .hero-content {
+            padding-left: 35px;
+            border-left: 4px solid #ff3f14;
+            h1, h4 {
+                margin: 0;
+                color: white;
+                text-transform: uppercase;
+            }
+
+            max-width: 675px;
+
+
+
+            h1 {
+                font-size: 40px;
+            }
+
+            @media (max-width: 767px) {
+                max-width: 90%;
+                padding-left: 15px;
+                h1 {
+                    font-size: 20px!important;
+                }
+            }
+        }
+    }
+}

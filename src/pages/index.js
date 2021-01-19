@@ -1,6 +1,7 @@
 import React from "react"
 
 import Layout from "../components/layout"
+import { Hero } from "../components/Hero"
 import SEO from "../components/seo"
 import featureImage from "../../static/images/hero.png"
 import thumbnailEvent from "../../static/images/feature-event.png"
@@ -11,7 +12,8 @@ import thumbnailStaff from "../../static/images/feature-user.png"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Make your Staff and Workspace Happy" />
+    <SEO title="Mission Ridge DFW | North Texas' Premier Shooting Range & Event Center" />
+    <Hero />
     {/* @TODO: Hero */}
     {/* @TODO: Signup */}
     {/* @TODO: Rendering */}
