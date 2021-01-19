@@ -12,7 +12,10 @@ import thumbnailStaff from "../../static/images/feature-user.png"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Mission Ridge DFW | North Texas' Premier Shooting Range & Event Center" />
+    <SEO
+      title="Mission Ridge DFW"
+      description="North Texas' Premier Shooting Range & Event Center"
+    />
     <Hero />
     {/* @TODO: Hero */}
     {/* @TODO: Signup */}
