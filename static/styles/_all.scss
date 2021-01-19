@@ -15,22 +15,22 @@ body {
   }
 
   a {
-    color: #8953B7;
+    color: #702226;
 
     &:hover, &:active {
-      color: #8953b7;
+      color: #702226;
     }
   }
 
   header {
-    background-color: #FDFAFF;
+    background-color: #222222;
     display: block;
-    padding: 39px 0;
+    padding: 20px 0;
 
     .logo {
       img {
-        width: 151px;
-        height: 44px;
+        width: 200px;
+        height: fit-content;
       }
     }
 
@@ -47,7 +47,7 @@ body {
           font-size: 16px;
           line-height: 47px;
           display: block;
-          background: #8953B7;
+          background: #702226;
           border-radius: 4px;
           text-align: center;
           color: #FFFFFF;
@@ -169,7 +169,7 @@ body {
   }
 
   .call-to-action {
-    background-color: #8953B7;
+    background-color: #702226;
     color: #ffffff;
     padding: 65px 0;
     border-radius: 40px 40px 0px 0px;
@@ -210,7 +210,7 @@ body {
         justify-content: center;
         font-weight: bold;
         flex-direction: column;
-        color: #8953B7;
+        color: #702226;
 
         @media screen and (max-width: $break-small) {
           margin: 0 auto;
@@ -313,6 +313,12 @@ body {
   footer {
     padding: 120px 0 45px;
 
+    .logo {
+      img {
+        max-width: 300px;
+      }
+    }
+
     @media screen and (max-width: $break-small) {
       padding: 50px 0 45px;
     }
@@ -351,14 +357,14 @@ body {
               color: #797283;
 
               &:hover, &:active {
-                color: #8953b7;
+                color: #702226;
               }
             }
           }
         }
 
         .links__special {
-          background-color: #8953b7;
+          background-color: #702226;
           color: #ffffff;
           border-radius: 4px;
           padding: 2px 5px;
