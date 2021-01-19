@@ -1,25 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: `HiStaff`,
-    description: `Make your Staff and Workspace Happy`,
-    author: `@mostafasoufi`,
+    title: `Mission Ridge Plano`,
+    description: `North Texas' Premier Shooting Range & Event Center`,
+    author: `Mission Ridge Gun Range`,
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/static/images`,
-      },
-    },
-    // {
-    //   resolve: "gatsby-plugin-mailchimp",
-    //   options: {
-    //     endpoint: "", // string; add your MC list endpoint here; see instructions below
-    //     timeout: 3500, // number; the amount of time, in milliseconds, that you want to allow mailchimp to respond to your request before timing out. defaults to 3500
-    //   },
-    // },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
@@ -44,11 +29,26 @@ module.exports = {
         // Defers execution of google analytics script after page load
         defer: false,
         // Any additional optional fields
-        sampleRate: 5,
-        siteSpeedSampleRate: 10,
-        cookieDomain: "missionridgedfw.com",
+        // sampleRate: 5,
+        // siteSpeedSampleRate: 10,
+        // cookieDomain: "missionridgedfw.com",
       },
     },
+    `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/static/images`,
+      },
+    },
+    // {
+    //   resolve: "gatsby-plugin-mailchimp",
+    //   options: {
+    //     endpoint: "", // string; add your MC list endpoint here; see instructions below
+    //     timeout: 3500, // number; the amount of time, in milliseconds, that you want to allow mailchimp to respond to your request before timing out. defaults to 3500
+    //   },
+    // },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
