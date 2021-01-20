@@ -2,14 +2,14 @@ import React, { useState } from "react"
 import addToMailchimp from "gatsby-plugin-mailchimp"
 
 const Form = () => {
-  const [formData, setFormData] = useState({
-    firstName: null,
-    lastName: null,
-    email: null,
-    phone: null,
-    content: null,
-    reason: null,
-  })
+  //   const [formData, setFormData] = useState({
+  //     firstName: null,
+  //     lastName: null,
+  //     email: null,
+  //     phone: null,
+  //     content: null,
+  //     reason: null,
+  //   })
   const [serverState, setServerState] = useState({
     submitting: false,
     status: null,
@@ -75,7 +75,9 @@ const Form = () => {
         <form onSubmit={handleOnSubmit}>
           <div className="fields">
             <div className="name">
-              <label className="label label-fname">First Name</label>
+              <label className="label label-fname" htmlFor="FNAME">
+                First Name
+              </label>
               <input
                 className="input name-input"
                 id="FNAME"
@@ -84,7 +86,9 @@ const Form = () => {
               />
             </div>
             <div className="lname">
-              <label className="label label-lname">Last Name</label>
+              <label className="label label-lname" htmlFor="LNAME">
+                Last Name
+              </label>
               <input
                 className="input name-input"
                 id="LNAME"
@@ -96,20 +100,22 @@ const Form = () => {
 
           <div className="fields">
             <div className="email">
-              <label className="label label-email">E-mail</label>
+              <label className="label label-email" htmlFor="email">
+                E-mail
+              </label>
               <input
                 className="input email-input"
                 id="email"
                 type="email"
                 name="email"
-                id="email"
               />
             </div>
             <div className="phone">
-              <label className="label label-phone">Phone</label>
+              <label className="label label-phone" htmlFor="PHONE">
+                Phone
+              </label>
               <input
                 className="input phone-input"
-                id="phone"
                 type="tel"
                 name="PHONE"
                 id="phone"
@@ -123,7 +129,7 @@ const Form = () => {
           >
             <option
               value="Select"
-              selected=""
+              defaultValue=""
               disabled=""
               className="placeholder"
             >
@@ -138,7 +144,7 @@ const Form = () => {
             className="input input-textarea message-input"
             id="message"
             name="CONTENT"
-            placeHolder="Message"
+            placeholder="Message"
           ></textarea>
 
           <div className="email-wrapper"></div>

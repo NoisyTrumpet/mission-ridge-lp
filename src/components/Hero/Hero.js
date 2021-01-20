@@ -2,10 +2,7 @@ import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 import { Animated } from "react-animated-css"
-import hero from "../../../static/images/hero.png"
 import "./Hero.scss"
-
-const backgroundFluidImageStack = [hero].reverse()
 
 const Hero = () => {
   const data = useStaticQuery(
@@ -27,14 +24,12 @@ const Hero = () => {
     `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2))`,
   ].reverse()
 
-  const imageData = data.desktop.childImageSharp.fluid
   return (
     <section className="hero">
       <BackgroundImage
         Tag="div"
         className="hero-image"
         fluid={backgroundFluidImageStack}
-        // backgroundColor={`#040e18`}
       >
         <section className="hero-content">
           <Animated

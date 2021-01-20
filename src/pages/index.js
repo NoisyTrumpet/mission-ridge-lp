@@ -150,7 +150,7 @@ const IndexPage = () => (
         </div>
 
         <div className={"button"}>
-          <a href="https://app.histaff.io" target={"_blank"} rel={"noreferer"}>
+          <a href="https://app.histaff.io" target={"_blank"} rel={"noreferrer"}>
             Get Started
           </a>
         </div>

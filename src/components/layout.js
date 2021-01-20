@@ -30,9 +30,14 @@ const Layout = ({ children }) => (
     render={data => (
       <>
         <Header siteTitle={data.site.siteMetadata.title} />
+
         <link
           rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
+          href="https://use.typekit.net/ujo8xej.css"
+        ></link>
+        <link
+          rel="stylesheet"
+          href="https://use.typekit.net/ujo8xej.css"
         ></link>
         <main>{children}</main>
         <footer>
@@ -81,7 +86,7 @@ const Layout = ({ children }) => (
                           className={"links__special"}
                           href={"https://feedback.histaff.io/"}
                           target="_blank"
-                          rel={"noreferer"}
+                          rel={"noreferrer"}
                           title={
                             "We look forward to receiving your great feedback"
                           }
@@ -125,7 +130,7 @@ const Layout = ({ children }) => (
                     <a
                       href="https://www.facebook.com/MissionRidgeRange/"
                       target="_blank"
-                      rel="noreferer"
+                      rel="noreferrer"
                       title={"Facebook"}
                     >
                       <img alt={"Facebook"} src={iconFacebook} />
@@ -133,7 +138,7 @@ const Layout = ({ children }) => (
                     <a
                       href="https://twitter.com/mrra_gunrange"
                       target="_blank"
-                      rel="noreferer"
+                      rel="noreferrer"
                       title={"Twitter"}
                     >
                       <img alt={"Twitter"} src={iconTwitter} />
@@ -141,7 +146,7 @@ const Layout = ({ children }) => (
                     {/* <a
                       href="https://www.linkedin.com/company/histaff/"
                       target="_blank"
-                      rel={"noreferer"}
+                      rel={"noreferrer"}
                       title={"LinkedIn"}
                     >
                       <img alt={"LinkedIn"} src={iconLinkedin} />
@@ -149,7 +154,7 @@ const Layout = ({ children }) => (
                     <a
                       href="https://github.com/histaff"
                       target="_blank"
-                      rel={"noreferer"}
+                      rel={"noreferrer"}
                       title={"GitHub"}
                     >
                       <img alt={"GitHub"} src={iconGitHub} />
@@ -157,7 +162,7 @@ const Layout = ({ children }) => (
                     <a
                       href="https://www.instagram.com/missionridgerange/"
                       target="_blank"
-                      rel={"noreferer"}
+                      rel={"noreferrer"}
                       title={"Instagram"}
                     >
                       <img alt={"Instagram"} src={iconInstagram} />

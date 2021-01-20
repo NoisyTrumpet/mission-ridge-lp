@@ -3,11 +3,6 @@ import addToMailchimp from "gatsby-plugin-mailchimp"
 import "./Signup.scss"
 
 const Signup = () => {
-  const [formData, setFormData] = useState({
-    firstName: null,
-    lastName: null,
-    email: null,
-  })
   const [serverState, setServerState] = useState({
     submitting: false,
     status: null,
@@ -65,37 +60,39 @@ const Signup = () => {
         <form onSubmit={handleOnSubmit}>
           <div className="fields">
             <div className="name">
-              <label className="label label-fname">First Name</label>
+              <label className="label label-fname" htmlFor="FNAME">
+                First Name
+              </label>
               <input
                 className="input name-input"
                 id="FNAME"
                 type="FNAME"
                 name="FNAME"
-                value={formData.firstName}
                 onChange={handleChange}
               />
             </div>
             <div className="lname">
-              <label className="label label-lname">Last Name</label>
+              <label className="label label-lname" htmlFor="LNAME">
+                Last Name
+              </label>
               <input
                 className="input name-input"
                 id="LNAME"
                 type="LNAME"
                 name="LNAME"
-                value={formData.lastName}
                 onChange={handleChange}
               />
             </div>
           </div>
           <div className="email-wrapper">
-            <label className="label label-email">E-mail</label>
+            <label className="label label-email" htmlFor="email">
+              E-mail
+            </label>
             <input
               className="input email-input"
               id="email"
               type="email"
               name="email"
-              id="email"
-              value={formData.email}
               onChange={handleChange}
             />
           </div>
