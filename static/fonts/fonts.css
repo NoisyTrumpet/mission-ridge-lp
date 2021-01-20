@@ -1,29 +1,13 @@
-@font-face {
-    font-family: 'Inter Bold';
-    font-style: normal;
-    font-weight: 700;
-    src: url("Inter-Bold.woff2") format("woff2"),
-    url("Inter-Bold.woff") format("woff");
-}
-
-@font-face {
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    src: url("Inter-Regular.woff2") format("woff2"),
-    url("Inter-Regular.woff") format("woff");
-}
-
-@font-face {
+/* @font-face {
     font-family: 'Open Sans Bold';
     font-style: normal;
     font-weight: 700;
-    src: url("OpenSans-Bold.ttf") format("ttf");
+    src: url("./OpenSans-Bold.ttf") format("ttf");
 }
 
 @font-face {
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 400;
-    src: url("OpenSans-Regular.ttf") format("ttf");
-}
+    src: url("./OpenSans-Regular.ttf") format("ttf");
+} */

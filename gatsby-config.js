@@ -77,18 +77,12 @@ module.exports = {
         web: [
           {
             file:
-              "https://fonts.googleapis.com/css2?family=PT+Serif&display=swap",
-            name: "PT Serif",
+              "https://fonts.googleapis.com/css2?family=Open+Sans&display=swap",
+            name: "Open Sans",
           },
           {
             file: "https://use.typekit.net/ujo8xej.css",
             name: "Industry",
-          },
-        ],
-        custom: [
-          {
-            name: "Open Sans",
-            file: "/fonts/fonts.css",
           },
         ],
       },
