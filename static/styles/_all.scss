@@ -1,5 +1,66 @@
 $break-small: 719px;
 
+
+// ----
+// libsass (v3.2.5)
+// ----
+
+/// Style the placeholder attribute of input[type="text"] fields.
+/// This mixin can be applied globally or on specific text fields
+/// @example
+/// // all input and textareas
+/// @include inputPlaceholder() {
+///     color: red;
+///     font-weight: 300;
+///     padding-top: 5px;
+///  }
+/// // just textareas
+/// textarea {
+///     @include inputPlaceholder() {
+///         padding: 15px;
+///     }
+/// }
+///
+@mixin inputPlaceholder() {
+  $selector: '';
+  $prefixes: (
+      moz: "::-moz",
+      webkit: "::-webkit",
+      ie: ":-ms"
+  );
+  @each $prop, $value in $prefixes {
+      @if $prop != "moz" {
+          $selector: #{$value}-input-placeholder;
+      } @else {
+          $selector: #{$value}-placeholder;
+      }
+      @if & {
+          &#{$selector} {
+              @content;
+          }
+      } @else {
+          #{$selector} {
+              @content;
+          }
+      }
+  }
+  &::placeholder {
+    @content;
+  }
+}
+
+@include inputPlaceholder() {
+  color: #797283;
+  font-weight: 300;
+  font-family: 'Open Sans';
+}
+textarea {
+  min-height: 100px;
+  @include inputPlaceholder() {
+      padding: 7px 0 0 20px ;
+  }
+}
+
 body {
   font-family: 'Open Sans';
   color: #797283;

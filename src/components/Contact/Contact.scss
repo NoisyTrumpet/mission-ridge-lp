@@ -1,0 +1,83 @@
+.contact-section {
+    width: 100%;
+    margin-top: 40px;
+    .map-wrapper {
+        background-color: #f1efef;
+        display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+      gap: 0px 0px;
+      grid-template-areas:
+        ". .";
+        @media (max-width: 767px) {
+            display: block;
+        }
+        .svg {
+            position: relative;
+            img {
+                max-width: 100%;
+            }
+        }
+        .cta {
+            display: grid;
+            place-items: center;
+            max-height: min-content;
+            @media (max-width: 767px) {
+                padding: 20px 0;
+            }
+
+            .text {
+                h2 {
+                    text-transform: uppercase;
+                    font-size: 35px;
+                    @media (max-width: 767px) {
+                        margin: 0 0 10px 0;
+                    }
+                }
+                text-align: center;
+                a {
+                    display: block;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+
+    .signup {
+        h3 {
+            text-transform: none!important;
+        }
+    }
+
+    form {
+        .label {
+            margin-right: 15px;
+            text-transform: uppercase;
+            @media (max-width: 767px) {
+                display: block;
+                margin-bottom: 5px;
+            }
+        }
+
+        .fields {
+            .email, .phone {
+                margin-top: 10px;
+            }
+        }
+        .input {
+            border: none;
+            background-color: #f1efef;
+            padding: 5px 0;
+        }
+
+        .reason-input {
+            margin-top: 10px;
+            width: 100%;
+        }
+
+        .input-textarea {
+            width: 100%;
+            margin-top: 10px;
+        }
+    }
+}

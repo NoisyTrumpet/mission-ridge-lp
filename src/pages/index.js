@@ -3,6 +3,7 @@ import React from "react"
 import Layout from "../components/layout"
 import { Hero } from "../components/Hero"
 import { Signup } from "../components/Signup"
+import { Contact } from "../components/Contact"
 import SEO from "../components/seo"
 
 const IndexPage = () => (
@@ -13,6 +14,7 @@ const IndexPage = () => (
     />
     <Hero />
     <Signup />
+    <Contact />
     {/* @TODO: Signup */}
     {/* @TODO: Rendering */}
     {/* @TODO: Facility */}

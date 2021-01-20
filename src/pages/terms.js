@@ -22,8 +22,9 @@ const TermsPage = () => (
         <p>
           1.1 These Terms and Conditions constitute a legally binding agreement
           made between you, whether personally or on behalf of an entity (
-          <strong>you</strong>), and <strong>HiStaff</strong>, doing business as
-          <strong> HiStaff</strong>{" "}
+          <strong>you</strong>), and <strong>Mission Ridge Range Plano</strong>,
+          doing business as
+          <strong> Mission Ridge Range Plano</strong>{" "}
           <strong>(http://missionridgedfw.com/) </strong>website as well as any
           related applications (the <strong>Site</strong>). &nbsp;
         </p>
@@ -87,22 +88,24 @@ const TermsPage = () => (
           warrant that all data provided by you is accurate. &nbsp;
         </p>
         <p>
-          <strong>&mdash; </strong>Our Acceptable Use Policy contact@histaff.io,
-          which sets out the permitted uses and prohibited uses of the Site.
-          When using the Site, you must comply with this Acceptable Use Policy.
-          &nbsp;
+          <strong>&mdash; </strong>Our Acceptable Use Policy contact@Mission
+          Ridge Range Plano.io, which sets out the permitted uses and prohibited
+          uses of the Site. When using the Site, you must comply with this
+          Acceptable Use Policy. &nbsp;
         </p>
         <p>
-          <strong>&mdash; </strong>Our Cookie Policy https://app.histaff.io,
-          which sets out information about the cookies on the Site.
+          <strong>&mdash; </strong>Our Cookie Policy https://app.Mission Ridge
+          Range Plano.io, which sets out information about the cookies on the
+          Site.
         </p>
 
         <h3>
           <strong>2. </strong>&nbsp;<strong>Acceptable Use </strong>{" "}
         </h3>
         <p>
-          2.1 Our full Acceptable Use Policy contact@histaff.io, sets out all
-          the permitted uses and prohibited uses of this site. &nbsp;
+          2.1 Our full Acceptable Use Policy contact@Mission Ridge Range
+          Plano.io, sets out all the permitted uses and prohibited uses of this
+          site. &nbsp;
         </p>
         <p>
           2.2 You may not access or use the Site for any purpose other than that
@@ -169,7 +172,7 @@ const TermsPage = () => (
         <p>
           4.3 In posting User Content, including reviews or making contact with
           other users of the Site you shall comply with our Acceptable Use
-          Policy contact@histaff.io. &nbsp;
+          Policy contact@Mission Ridge Range Plano.io. &nbsp;
         </p>
         <p>
           4.4 You warrant that any User Content does comply with our Acceptable
