@@ -28,7 +28,7 @@ const Signup = () => {
       name: form.name.value,
       email: form.email.value,
     })
-    addToMailchimp(formData.email, formData.name)
+    addToMailchimp(formData.email)
       .then(console.log("Success!"))
       .catch(error => {
         console.log(error)
