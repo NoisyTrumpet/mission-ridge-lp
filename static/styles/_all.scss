@@ -85,14 +85,15 @@ body {
 
   header {
     background-color: #222222;
-    display: block;
+    display: grid;
     padding: 20px 0;
+    align-items: center;
 
     .logo {
       img {
         width: 200px;
         height: fit-content;
-        @media (max-width: 767px) {
+        @media (max-width: 500px) {
           width: 150px;
         }
         @media (max-width: 350px) {
