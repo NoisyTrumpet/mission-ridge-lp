@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: `Mission Ridge Plano`,
@@ -45,8 +49,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-mailchimp",
       options: {
-        endpoint:
-          "https://missionridgerange.us12.list-manage.com/subscribe/post?u=bc43b0c27aef50f23635a3f0d&amp;id=7170505dfd", // string; add your MC list endpoint here; see instructions below
+        endpoint: process.env.MAILCHIMP_POST, // string; add your MC list endpoint here; see instructions below
         timeout: 3500, // number; the amount of time, in milliseconds, that you want to allow mailchimp to respond to your request before timing out. defaults to 3500
       },
     },

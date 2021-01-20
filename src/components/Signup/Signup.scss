@@ -4,8 +4,23 @@
         h3 {
             text-transform: uppercase;
         }
+
+        p {
+            @media (max-width: 767px) {
+                max-width: 80%;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    h5 {
+        text-align: center;
+        margin: 0;
     }
     .form {
+        @media (max-width: 767px) {
+            padding: 0px 20px;
+        }
         display: grid;
         place-items: center;
         margin-top: 20px;
@@ -21,6 +36,10 @@
                     .label {
                         margin-right: 15px;
                         text-transform: uppercase;
+                        @media (max-width: 767px) {
+                            display: block;
+                            margin-bottom: 5px;
+                        }
                     }
 
                     .input {
@@ -28,22 +47,61 @@
                         background-color: #f1efef;
                         padding: 5px 0;
 
+
                     }
                 }
 
-                .email {
+                .lname {
                     .label {
                         margin-right: 15px;
                         text-transform: uppercase;
+                        @media (max-width: 767px) {
+                            display: block;
+                            margin-bottom: 5px;
+                        }
                     }
+
+
 
                     .input {
                         border: none;
                         background-color: #f1efef;
                         padding: 5px 0;
 
+
                     }
                 }
+
+
+            }
+
+            .email-wrapper {
+                display: grid;
+                margin-top: 20px;
+                grid-template-columns: 0.3fr 1.7fr;
+                grid-template-rows: 1fr;
+                gap: 0px 0px;
+                grid-template-areas:
+                  ". .";
+                  align-items: center;
+                  @media (max-width: 767px) {
+                    display: block;
+                }
+
+                  .label {
+                      text-transform: uppercase;
+                      @media (max-width: 767px) {
+                        display: block;
+                        margin-bottom: 5px;
+                    }
+                  }
+                  .input {
+                    border: none;
+                    background-color: #f1efef;
+                    padding: 5px 0;
+                    width: 100%;
+                  }
+
             }
 
             .button-wrapper {
