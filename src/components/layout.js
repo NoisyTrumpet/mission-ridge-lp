@@ -13,8 +13,6 @@ import Header from "./header"
 import "../../static/styles/main.scss"
 import logo from "../../static/images/logo_maroon.svg"
 import iconTwitter from "../../static/images/icon-twitter.svg"
-import iconLinkedin from "../../static/images/icon-linkedin.svg"
-import iconGitHub from "../../static/images/icon-github.svg"
 import iconInstagram from "../../static/images/icon-instagram.svg"
 import iconFacebook from "../../static/images/icon-facebook.svg"
 
@@ -82,7 +80,7 @@ const Layout = ({ children }) => (
                         <a
                           className={"links__special"}
                           href={"https://feedback.histaff.io/"}
-                          target={"_blank"}
+                          target="_blank"
                           rel={"noreferer"}
                           title={
                             "We look forward to receiving your great feedback"
@@ -126,23 +124,23 @@ const Layout = ({ children }) => (
                   <div className={"social"}>
                     <a
                       href="https://www.facebook.com/MissionRidgeRange/"
-                      target={"_blank"}
-                      rel={"noreferer"}
+                      target="_blank"
+                      rel="noreferer"
                       title={"Facebook"}
                     >
                       <img alt={"Facebook"} src={iconFacebook} />
                     </a>
                     <a
                       href="https://twitter.com/mrra_gunrange"
-                      target={"_blank"}
-                      rel={"noreferer"}
+                      target="_blank"
+                      rel="noreferer"
                       title={"Twitter"}
                     >
                       <img alt={"Twitter"} src={iconTwitter} />
                     </a>
                     {/* <a
                       href="https://www.linkedin.com/company/histaff/"
-                      target={"_blank"}
+                      target="_blank"
                       rel={"noreferer"}
                       title={"LinkedIn"}
                     >
@@ -150,7 +148,7 @@ const Layout = ({ children }) => (
                     </a>
                     <a
                       href="https://github.com/histaff"
-                      target={"_blank"}
+                      target="_blank"
                       rel={"noreferer"}
                       title={"GitHub"}
                     >
@@ -158,7 +156,7 @@ const Layout = ({ children }) => (
                     </a> */}
                     <a
                       href="https://www.instagram.com/missionridgerange/"
-                      target={"_blank"}
+                      target="_blank"
                       rel={"noreferer"}
                       title={"Instagram"}
                     >

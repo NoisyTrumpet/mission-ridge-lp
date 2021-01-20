@@ -1,5 +1,5 @@
 @font-face {
-    font-family: 'Inter';
+    font-family: 'Inter Bold';
     font-style: normal;
     font-weight: 700;
     src: url("Inter-Bold.woff2") format("woff2"),
@@ -15,17 +15,15 @@
 }
 
 @font-face {
-    font-family: 'Open Sans';
+    font-family: 'Open Sans Bold';
     font-style: normal;
     font-weight: 700;
-    src: url("OpenSans-Bold.ttf") format("ttf"),
-    url("OpenSans-Bold.woff") format("woff");
+    src: url("OpenSans-Bold.ttf") format("ttf");
 }
 
 @font-face {
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 400;
-    src: url("OpenSans-Regular.ttf") format("ttf"),
-    url("OpenSans-Regular.woff") format("woff");
+    src: url("OpenSans-Regular.ttf") format("ttf");
 }

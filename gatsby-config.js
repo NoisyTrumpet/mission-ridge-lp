@@ -42,25 +42,26 @@ module.exports = {
         path: `${__dirname}/static/images`,
       },
     },
-    // {
-    //   resolve: "gatsby-plugin-mailchimp",
-    //   options: {
-    //     endpoint: "", // string; add your MC list endpoint here; see instructions below
-    //     timeout: 3500, // number; the amount of time, in milliseconds, that you want to allow mailchimp to respond to your request before timing out. defaults to 3500
-    //   },
-    // },
+    {
+      resolve: "gatsby-plugin-mailchimp",
+      options: {
+        endpoint:
+          "https://missionridgerange.us12.list-manage.com/subscribe/post?u=bc43b0c27aef50f23635a3f0d&amp;id=7170505dfd", // string; add your MC list endpoint here; see instructions below
+        timeout: 3500, // number; the amount of time, in milliseconds, that you want to allow mailchimp to respond to your request before timing out. defaults to 3500
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `mission-ridge-lp`,
-        short_name: `starter`,
+        name: `Mission Ridge Plano`,
+        short_name: `mission-ridge`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#FF54AC`,
         display: `minimal-ui`,
-        icon: `${__dirname}/static/images/histaff.png`, // This path is relative to the root of the site.
+        icon: `${__dirname}/static/images/favicon.ico`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-sass`,

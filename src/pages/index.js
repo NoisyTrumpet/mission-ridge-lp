@@ -2,22 +2,17 @@ import React from "react"
 
 import Layout from "../components/layout"
 import { Hero } from "../components/Hero"
+import { Signup } from "../components/Signup"
 import SEO from "../components/seo"
-import featureImage from "../../static/images/hero.png"
-import thumbnailEvent from "../../static/images/feature-event.png"
-import thumbnailBoard from "../../static/images/feature-board.png"
-import thumbnailNews from "../../static/images/feature-news.png"
-import thumbnailTeams from "../../static/images/feature-team.png"
-import thumbnailStaff from "../../static/images/feature-user.png"
 
 const IndexPage = () => (
   <Layout>
     <SEO
-      title="Mission Ridge DFW"
+      title="Home"
       description="North Texas' Premier Shooting Range & Event Center"
     />
     <Hero />
-    {/* @TODO: Hero */}
+    <Signup />
     {/* @TODO: Signup */}
     {/* @TODO: Rendering */}
     {/* @TODO: Facility */}
