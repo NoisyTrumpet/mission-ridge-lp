@@ -4,6 +4,7 @@ import Layout from "../components/layout"
 import { Hero } from "../components/Hero"
 import { Signup } from "../components/Signup"
 import { Contact } from "../components/Contact"
+import { Picture } from "../components/Picture"
 import SEO from "../components/seo"
 
 const IndexPage = () => (
@@ -14,6 +15,7 @@ const IndexPage = () => (
     />
     <Hero />
     <Signup />
+    <Picture />
     <Contact />
     {/* @TODO: Signup */}
     {/* @TODO: Rendering */}
