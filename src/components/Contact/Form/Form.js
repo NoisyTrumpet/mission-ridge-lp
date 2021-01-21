@@ -67,7 +67,7 @@ const Form = () => {
     <section className="signup">
       <div className="text">
         <h3>
-          Please fiil out the form below if you have any questions! We will
+          Please fill out the form below if you have any questions! We will
           contact you within 48 hours.
         </h3>
       </div>
