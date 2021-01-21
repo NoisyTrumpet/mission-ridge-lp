@@ -1,0 +1,79 @@
+.facility {
+  disply: inline-block;
+  max-width: 1200px;
+  margin: auto;
+
+  .imgGrid {
+    column-count: 3;
+    column-gap: 15px;
+    margin: 2rem auto;
+
+    @media (max-width: 767px) {
+        column-count: 1;
+        margin: 2rem;
+    }
+
+    .fImg {
+      width: auto;
+      height: 280px;
+
+      @media (max-width: 767px) {
+          margin: 15px auto;
+      }
+    }
+  }
+
+  .perks-Sect {
+    margin: auto;
+    text-align: center;
+
+    @media (max-width: 767px) {
+        margin: auto 1rem;
+    }
+
+    h3 {
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 2.6rem;
+
+      @media (max-width: 767px) {
+          font-size: 2.3rem;
+      }
+    }
+
+    .perks {
+      color: black;
+      text-transform: capitalize;
+      text-align: left;
+      max-width: 80%;
+      margin: auto;
+
+      @media (max-width: 767px) {
+          max-width: 100%;
+      }
+
+      ul {
+        list-style: disc;
+        line-height: 1.2rem;
+        column-count: 2;
+        column-width: 50px;
+        column-gap: 1.5rem;
+        position: relative;
+        left: 6%;
+
+        @media (max-width: 1025px) {
+            left: 3%;
+        }
+
+        @media (max-width: 767px) {
+            column-count: 1;
+            left: 0%;
+        }
+
+        li {
+          margin: 6px;
+        }
+      }
+    }
+  }
+}
