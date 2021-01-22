@@ -63,13 +63,14 @@
     text-align: center;
 
     @media (max-width: 767px) {
-        margin: auto 1rem;
+        margin: auto 20px;
     }
 
     h3 {
       text-transform: uppercase;
       font-weight: bold;
       font-size: 2.6rem;
+      margin-bottom: 10px;
 
       @media (max-width: 767px) {
           font-size: 2.3rem;
@@ -79,8 +80,7 @@
     .perks {
       color: black;
       display: grid;
-      grid-template-rows: 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
+      place-items: middle;
 
       @media (max-width: 768px) {
           // max-width: max-content;
@@ -99,11 +99,16 @@
         .perks-sub {
           max-width: max-content !important;
           max-height: fit-content !important;
+          margin: 0 auto;
 
         ul {
           list-style: disc;
           text-align: left !important;
-          margin-left: 3%;
+
+          @media (min-width: 767px) {
+            margin-top: 20px;
+            column-count:3;
+          }
 
           li {
             padding-top: 5px;

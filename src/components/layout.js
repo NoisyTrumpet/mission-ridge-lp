@@ -112,8 +112,8 @@ const Layout = ({ children }) => (
 
             <div className={"copyright"}>
               <p>
-                © Copyright {new Date().getFullYear()}, {` `} Mission Ridge |
-                DFW. All rights reserved.
+                © Copyright {new Date().getFullYear()}, {` `} Mission Ridge
+                Range & Academy | DFW. All rights reserved.
               </p>
             </div>
           </div>

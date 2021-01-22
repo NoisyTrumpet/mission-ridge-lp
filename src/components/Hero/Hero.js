@@ -37,14 +37,14 @@ const Hero = () => {
             animationOut="fadeOutDown"
             isVisible={true}
           >
-            <h1>North Texas' Premier Shooting Range & Event Center</h1>
+            <h3> Coming Soon Spring 2021!</h3>
           </Animated>
           <Animated
             animationIn="fadeInUp"
             animationOut="fadeOutDown"
             isVisible={true}
           >
-            <h4>Coming Spring 2021!</h4>
+            <h1>North Texas' Premier Shooting Range & Event Center</h1>
           </Animated>
         </section>
       </BackgroundImage>

@@ -5,7 +5,10 @@ const Form = () => {
   return (
     <section className="signup">
       <div className="text">
-        <h3>Please fiil out the form below if you have any questions!</h3>
+        <h3>
+          If you have any questions on memberships, joining our team or general
+          questions please fill out the form below!
+        </h3>
         <p>We will contact you within 48 hours.</p>
       </div>
       <div className="form">

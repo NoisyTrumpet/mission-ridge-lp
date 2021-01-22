@@ -31,9 +31,9 @@ const Picture = () => {
       <div>
         <p>
           Coming Soon - North Texas' state-of-the-art, family-friendly shooting
-          center and event venue. Our 30,000 square foot facility offers pistol,
-          rifle and archery ranges with a virtual training simulator and the
-          only 100-yard indoor shooting lanes in Plano, Texas. We invite
+          center and event venue. Our 30,000 square foot facility will offer
+          pistol, rifle and archery ranges with a virtual training simulator and
+          the only 100-yard indoor shooting lanes in Plano, Texas. We invite
           everyone to experience our fun, safe, world-class shooting facility!
         </p>
       </div>
