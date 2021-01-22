@@ -34,6 +34,14 @@ const SlideShow = () => {
     index === 0 ? setIndex(length) : setIndex(index - 1)
   const { node } = allFile.edges[index]
 
+  useEffect(() => {
+    const timeout = setTimeout(() => handleNext(), 3000)
+
+    return () => clearTimeout(timeout)
+  })
+
+  // useEffect({}, [])
+
   return (
     <div>
       <div>
@@ -43,14 +51,6 @@ const SlideShow = () => {
           alt={node.name.replace(/-/g, " ").substring(2)}
           autoPlay={2}
         />
-        <div className="button-container">
-          <div className="prev">
-            <button onClick={() => handlePrevious()}>Previous</button>
-          </div>
-          <div className="next">
-            <button onClick={() => handleNext()}>Next</button>
-          </div>
-        </div>
       </div>
     </div>
   )

@@ -4,7 +4,8 @@
   position: relative;
 
   .button-container {
-    margin-top: 20px;
+    max-width: 400px;
+    width: 100%;
     display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
@@ -82,16 +83,20 @@
 
     .perks {
       color: black;
-      text-transform: capitalize;
       text-align: left;
       max-width: 80%;
       margin: auto;
 
       @media (max-width: 767px) {
           max-width: 100%;
+          padding: 0 20px;
       }
 
       ul {
+        @media (max-width: 767px) {
+          max-width: 400px;
+          margin: 0 auto;
+      }
         list-style: disc;
         line-height: 1.2rem;
         column-count: 2;

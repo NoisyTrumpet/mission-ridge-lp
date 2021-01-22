@@ -52,8 +52,8 @@ const Signup = () => {
       <div className="text">
         <h3>Sign up for email updates</h3>
         <p>
-          Please enter your information below and we'll keep you in the loop for
-          everything upcoming!
+          Please enter your information below to receive exclusive offers and
+          updates on everything upcoming.
         </p>
       </div>
       <div className="form">
@@ -68,6 +68,7 @@ const Signup = () => {
                 id="FNAME"
                 type="FNAME"
                 name="FNAME"
+                required
                 onChange={handleChange}
               />
             </div>
@@ -80,25 +81,27 @@ const Signup = () => {
                 id="LNAME"
                 type="LNAME"
                 name="LNAME"
+                required
                 onChange={handleChange}
               />
             </div>
           </div>
           <div className="email-wrapper">
             <label className="label label-email" htmlFor="email">
-              E-mail
+              Email
             </label>
             <input
               className="input email-input"
               id="email"
               type="email"
               name="email"
+              required
               onChange={handleChange}
             />
           </div>
           {!serverState.submitting && <h5>{serverState.status}</h5>}
           <div className="button-wrapper">
-            <button type="submit">Subscribe</button>
+            <button type="submit">KEEP ME IN THE LOOP</button>
           </div>
         </form>
       </div>

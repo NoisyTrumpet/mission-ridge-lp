@@ -2,77 +2,17 @@ import React, { useState } from "react"
 import addToMailchimp from "gatsby-plugin-mailchimp"
 
 const Form = () => {
-  //   const [formData, setFormData] = useState({
-  //     firstName: null,
-  //     lastName: null,
-  //     email: null,
-  //     phone: null,
-  //     content: null,
-  //     reason: null,
-  //   })
-  const [serverState, setServerState] = useState({
-    submitting: false,
-    status: null,
-  })
-
-  //   const handleChange = e => {
-  //     const form = e.target
-  //     setFormData({
-  //       firstName: form.FNAME.value,
-  //       lastName: form.LNAME.value,
-  //       email: form.email.value,
-  //       phone: form.PHONE.value,
-  //       content: form.CONTENTS.value,
-  //       reason: form.REASON.value,
-  //     })
-  //   }
-
-  const handleOnSubmit = e => {
-    e.preventDefault()
-    const form = e.target
-    setServerState({ submitting: true })
-
-    addToMailchimp(form.email.value, {
-      FNAME: form.FNAME.value,
-      LNAME: form.LNAME.value,
-      CONTENT: form.CONTENT.value,
-      REASON: form.REASON.value,
-      PHONE: form.PHONE.value,
-    })
-      .then(response => {
-        console.log(response)
-        if (response.result === "error") {
-          if (response.msg.includes("Recipient")) {
-            setServerState({
-              submitting: false,
-              status: response.msg.split(" &amp")[0],
-            })
-          }
-          setServerState({
-            submitting: false,
-            status: response.msg,
-          })
-        }
-        setServerState({
-          submitting: false,
-          status: response.msg,
-        })
-      })
-      .catch(error => {
-        console.log(error)
-      })
-  }
-
   return (
     <section className="signup">
       <div className="text">
-        <h3>
-          Please fiil out the form below if you have any questions! We will
-          contact you within 48 hours.
-        </h3>
+        <h3>Please fiil out the form below if you have any questions!</h3>
+        <p>We will contact you within 48 hours.</p>
       </div>
       <div className="form">
-        <form onSubmit={handleOnSubmit}>
+        <form
+          action="https://getform.io/f/fdd50f40-4c9f-4126-935c-3ed2ad7c273c"
+          method="POST"
+        >
           <div className="fields">
             <div className="name">
               <label className="label label-fname" htmlFor="FNAME">
@@ -83,6 +23,7 @@ const Form = () => {
                 id="FNAME"
                 type="FNAME"
                 name="FNAME"
+                required
               />
             </div>
             <div className="lname">
@@ -94,6 +35,7 @@ const Form = () => {
                 id="LNAME"
                 type="LNAME"
                 name="LNAME"
+                required
               />
             </div>
           </div>
@@ -101,13 +43,14 @@ const Form = () => {
           <div className="fields">
             <div className="email">
               <label className="label label-email" htmlFor="email">
-                E-mail
+                Email
               </label>
               <input
                 className="input email-input"
                 id="email"
                 type="email"
                 name="email"
+                required
               />
             </div>
             <div className="phone">
@@ -132,6 +75,7 @@ const Form = () => {
               defaultValue=""
               disabled=""
               className="placeholder"
+              required
             >
               Reason
             </option>
@@ -145,12 +89,12 @@ const Form = () => {
             id="message"
             name="CONTENT"
             placeholder="Message"
+            required
           ></textarea>
 
           <div className="email-wrapper"></div>
-          {!serverState.submitting && <h5>{serverState.status}</h5>}
           <div className="button-wrapper">
-            <button type="submit">Submit</button>
+            <button type="submit">Contact</button>
           </div>
         </form>
       </div>

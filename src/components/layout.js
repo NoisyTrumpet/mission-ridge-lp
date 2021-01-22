@@ -12,7 +12,7 @@ import { StaticQuery, graphql, Link } from "gatsby"
 import Header from "./header"
 import "../../static/styles/main.scss"
 import logo from "../../static/images/logo_maroon.svg"
-import iconTwitter from "../../static/images/icon-twitter.svg"
+import iconYoutube from "../../static/images/youtube.svg"
 import iconInstagram from "../../static/images/icon-instagram.svg"
 import iconFacebook from "../../static/images/icon-facebook.svg"
 
@@ -42,108 +42,49 @@ const Layout = ({ children }) => (
         <main>{children}</main>
         <footer>
           <div className={"container"}>
-            <div className={"row"}>
-              <div className={"col-5"}>
-                <div className={"widget__item"}>
-                  <div className={"logo"}>
-                    <Link to="/" title={"HiStaff"}>
-                      <img alt={"Logo"} src={logo} />
-                    </Link>
-                  </div>
+            <div className={"logo"}>
+              <Link to="/" title={"HiStaff"}>
+                <img alt={"Logo"} src={logo} />
+              </Link>
+            </div>
 
-                  <div className={"about"}>
-                    <p>
-                      Coming Soon - North Texas’ state-of-the-art, family
-                      friendly shooting center and event venue. Our 30,000
-                      sqaure foot facility offers pistol, rifle and archery
-                      ranges with a virtual training simulator and the only
-                      100-yard indoor shooting lanes in Plano, Texas We invite
-                      everyone to experience our fun, safe, world-class shooting
-                      facility!
-                    </p>
-                  </div>
-                </div>
-              </div>
+            <div className={"about"}>
+              <p>
+                Coming Soon - North Texas’ state-of-the-art, family friendly
+                shooting center and event venue. Our 30,000 sqaure foot facility
+                offers pistol, rifle and archery ranges with a virtual training
+                simulator and the only 100-yard indoor shooting lanes in Plano,
+                Texas We invite everyone to experience our fun, safe,
+                world-class shooting facility!
+              </p>
+            </div>
+            <div className={"links"}>
+              <Link to="/contact" title={"Contact Us"}>
+                Contact |{" "}
+              </Link>
+              <Link to="/privacy" title={"Privacy Policy"}>
+                Privacy
+              </Link>
+            </div>
 
-              <div className={"col-2"}>
-                <div className={"widget__item"}>
-                  <ul className={"links"}>
-                    <h4>Mission Ridge</h4>
-                    <ul>
-                      <li>
-                        <a href={"https://www.missionridgerange.com/"}>Home</a>
-                      </li>
-                      {/* <li>
-                        <Link to="/about" title={"About Us"}>
-                          About
-                        </Link>
-                      </li>
-                      <li>
-                        <a href={"http://missionridgedfw.com//blog"}>Blog</a>
-                      </li>
-                      <li>
-                        <a
-                          className={"links__special"}
-                          href={"https://feedback.histaff.io/"}
-                          target="_blank"
-                          rel={"noreferrer"}
-                          title={
-                            "We look forward to receiving your great feedback"
-                          }
-                        >
-                          Feedback
-                        </a>
-                      </li> */}
-                    </ul>
-                  </ul>
-                </div>
-              </div>
-
-              <div className={"col-2"}>
-                <div className={"widget__item"}>
-                  <div className={"links"}>
-                    <h4>Support</h4>
-                    <ul>
-                      <li>
-                        <Link to="/contact" title={"Contact Us"}>
-                          Contact
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/privacy" title={"Privacy Policy"}>
-                          Privacy
-                        </Link>
-                      </li>
-                      {/* <li>
-                        <Link to="/terms" title={"Terms Of Use"}>
-                          Terms Of Use
-                        </Link>
-                      </li> */}
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              <div className={"col-3"}>
-                <div className={"widget__item"}>
-                  <div className={"social"}>
-                    <a
-                      href="https://www.facebook.com/MissionRidgeRange/"
-                      target="_blank"
-                      rel="noreferrer"
-                      title={"Facebook"}
-                    >
-                      <img alt={"Facebook"} src={iconFacebook} />
-                    </a>
-                    <a
-                      href="https://twitter.com/mrra_gunrange"
-                      target="_blank"
-                      rel="noreferrer"
-                      title={"Twitter"}
-                    >
-                      <img alt={"Twitter"} src={iconTwitter} />
-                    </a>
-                    {/* <a
+            <div className="social">
+              <a
+                href="https://www.facebook.com/MissionRidgeRange/"
+                target="_blank"
+                rel="noreferrer"
+                title={"Facebook"}
+              >
+                <img alt={"Facebook"} src={iconFacebook} />
+              </a>
+              <a
+                href="https://www.youtube.com/channel/UC5LaBuUcQPfdKbAuevQJEBQ"
+                target="_blank"
+                rel="noreferrer"
+                title={"YoutTube"}
+              >
+                <img alt={"YoutTube"} src={iconYoutube} />
+              </a>
+              {/* <a
                       href="https://www.linkedin.com/company/histaff/"
                       target="_blank"
                       rel={"noreferrer"}
@@ -159,26 +100,20 @@ const Layout = ({ children }) => (
                     >
                       <img alt={"GitHub"} src={iconGitHub} />
                     </a> */}
-                    <a
-                      href="https://www.instagram.com/missionridgerange/"
-                      target="_blank"
-                      rel={"noreferrer"}
-                      title={"Instagram"}
-                    >
-                      <img alt={"Instagram"} src={iconInstagram} />
-                    </a>
-                  </div>
-                </div>
-              </div>
+              <a
+                href="https://www.instagram.com/missionridgerange/"
+                target="_blank"
+                rel={"noreferrer"}
+                title={"Instagram"}
+              >
+                <img alt={"Instagram"} src={iconInstagram} />
+              </a>
             </div>
 
             <div className={"copyright"}>
               <p>
-                Copyright {new Date().getFullYear()}, {` `}{" "}
-                <a href="http://missionridgedfw.com/" title={"HiStaff"}>
-                  Mission Ridge | DFW
-                </a>
-                . All rights reserved.
+                © Copyright {new Date().getFullYear()}, {` `} Mission Ridge |
+                DFW. All rights reserved.
               </p>
             </div>
           </div>

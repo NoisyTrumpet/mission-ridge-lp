@@ -12,10 +12,6 @@ const Header = ({ siteTitle }) => (
             <img alt={"Logo"} src={logo} />
           </Link>
         </div>
-
-        <div className={"get-started"}>
-          <Link to="/contact">Contact</Link>
-        </div>
       </div>
     </div>
   </header>

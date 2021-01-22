@@ -49,6 +49,10 @@ $break-small: 719px;
   }
 }
 
+label {
+  color: #000;
+}
+
 @include inputPlaceholder() {
   color: #797283;
   font-weight: 300;
@@ -64,6 +68,9 @@ textarea {
 body {
   font-family: 'Open Sans';
   color: #797283;
+  li {
+    color: #797283;
+  }
 
   p {
     font-family: 'Open Sans';
@@ -386,11 +393,34 @@ body {
 
   footer {
     padding: 120px 0 45px;
+    .container {
+      display: grid;
+    place-items: center;
+    }
+
 
     .logo {
+      width: 300px;
       img {
-        max-width: 300px;
+        width: 300px;
+        max-width: 100%;
+        margin-bottom: 30px;
       }
+    }
+
+    p, .links {
+      text-align: center;
+      margin-bottom: 30px;
+      line-height: 20px;
+    }
+
+    .social {
+      display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 20px;
+  grid-template-areas:
+    ". . .";
     }
 
     @media screen and (max-width: $break-small) {

@@ -13,7 +13,7 @@ const Facility = () => {
         <h3>Inside our 30,000 sq ft facility</h3>
         <div className="perks">
           <ul>
-            <li>Open to the public,No Membership Required to shoot!</li>
+            <li>Open to the public, No Membership Required to Shoot!</li>
             <li>Premier 100-yard indoor range</li>
             <li>Shooting lanes with computer-controlled targets</li>
             <li>Sound abatement and high-tech air handling</li>
