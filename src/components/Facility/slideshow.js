@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react"
-import { useStaticQuery, graphql } from 'gatsby'
-import Img from 'gatsby-image'
+import { useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
 
 const SlideShow = () => {
   const [index, setIndex] = useState(0)
@@ -27,33 +27,11 @@ const SlideShow = () => {
     `
   )
 
-
-
-  const autoPlayRef = useRef()
-
-  useEffect(() => {
-    // autoPlayRef.current = handleNext
-  })
-
-  useEffect(() => {
-    const play = () => {
-      autoPlayRef.current()
-    }
-
-    const interval = setInterval(play, Img.autoPlay * 1000)
-    return () => clearInterval(interval)
-  }, [])
-
-
-  //Minus 1 for array offset from 0
   const length = allFile.edges.length - 1
-
   const handleNext = () =>
     index === length ? setIndex(0) : setIndex(index + 1)
-
   const handlePrevious = () =>
     index === 0 ? setIndex(length) : setIndex(index - 1)
-
   const { node } = allFile.edges[index]
 
   return (
@@ -62,13 +40,20 @@ const SlideShow = () => {
         <Img
           fluid={node.childImageSharp.fluid}
           key={node.id}
-          alt={node.name.replace(/-/g, ' ').substring(2)}
+          alt={node.name.replace(/-/g, " ").substring(2)}
           autoPlay={2}
         />
+        <div className="button-container">
+          <div className="prev">
+            <button onClick={() => handlePrevious()}>Previous</button>
+          </div>
+          <div className="next">
+            <button onClick={() => handleNext()}>Next</button>
+          </div>
+        </div>
       </div>
-
     </div>
   )
 }
 
-export default SlideShow;
+export default SlideShow

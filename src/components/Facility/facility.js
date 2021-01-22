@@ -1,6 +1,6 @@
 import React from "react"
-import SlideShow from "./slideshow.js"
-import "./facility.scss"
+import SlideShow from "./SlideShow.js"
+import "./Facility.scss"
 
 const Facility = () => {
   return (

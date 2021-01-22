@@ -1,11 +1,44 @@
 .facility {
-  disply: inline-block;
   max-width: 1200px;
   margin: auto;
+  position: relative;
+
+  .button-container {
+    margin-top: 20px;
+    display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    ". .";
+
+    button {
+      background-color: #fc3f14;
+                    border: 2px solid #fc3f14;
+                    padding: 5px 10px;
+                    color: white;
+                    margin-top: 20px;
+                    text-align: center;
+                    transition: 0.3s all;
+                    &:hover {
+                        background-color: white;
+                        color: #fc3f14;
+                        border: 2px solid #fc3f14;
+                        transition: 0.3s all;
+                        cursor: pointer;
+                    }
+    }
+    .prev {
+      display: grid;
+      place-items: center left;
+    }
+    .next {
+      display: grid;
+      place-items: center right;
+    }
+  }
 
   .imgGrid {
-    column-count: 3;
-    column-gap: 15px;
     margin: 2rem auto;
 
     @media (max-width: 767px) {
@@ -13,9 +46,15 @@
         margin: 2rem;
     }
 
+    .gatsby-image-wrapper {
+      width: 400px;
+      max-width: 100%;
+      margin: 0 auto;
+    }
+
     .fImg {
       width: auto;
-      height: 280px;
+      height: auto;
 
       @media (max-width: 767px) {
           margin: 15px auto;
