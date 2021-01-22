@@ -58,7 +58,7 @@
     }
   }
 
-  .perks-Sect {
+  .perks-sect {
     margin: auto;
     text-align: center;
 
@@ -78,36 +78,37 @@
 
     .perks {
       color: black;
-      text-align: left;
-      max-width: 80%;
-      margin: auto;
+      display: grid;
+      grid-template-rows: 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
 
-      @media (max-width: 767px) {
-          max-width: 100%;
+      @media (max-width: 768px) {
+          // max-width: max-content;
+          // max-height: fit-content;
           padding: 0 20px;
+          grid-template-rows: auto 1fr;
+          grid-template-columns: 1fr;
+          margin: 0 auto;
+          line-height: 21px;
+
+          .perks-sub {
+            margin-bottom: 1rem;
+          }
       }
 
-      ul {
-        list-style: disc;
-        line-height: 1.2rem;
-        column-count: 2;
-        column-width: 50px;
-        column-gap: 1.5rem;
-        position: relative;
-        left: 6%;
+        .perks-sub {
+          max-width: max-content !important;
+          max-height: fit-content !important;
 
-        @media (max-width: 1025px) {
-            left: 3%;
-        }
+        ul {
+          list-style: disc;
+          text-align: left !important;
+          margin-left: 3%;
 
-        @media (max-width: 767px) {
-            column-count: 1;
-            left: 0%;
-        }
-
-        li {
-          padding-top: 5px;
-          margin: 6px;
+          li {
+            padding-top: 5px;
+            margin: 6px;
+          }
         }
       }
     }
