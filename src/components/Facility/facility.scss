@@ -1,0 +1,118 @@
+.facility {
+  max-width: 1200px;
+  margin: auto;
+  position: relative;
+
+  .button-container {
+    margin-top: 20px;
+    display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    ". .";
+
+    button {
+      background-color: #fc3f14;
+                    border: 2px solid #fc3f14;
+                    padding: 5px 10px;
+                    color: white;
+                    margin-top: 20px;
+                    text-align: center;
+                    transition: 0.3s all;
+                    &:hover {
+                        background-color: white;
+                        color: #fc3f14;
+                        border: 2px solid #fc3f14;
+                        transition: 0.3s all;
+                        cursor: pointer;
+                    }
+    }
+    .prev {
+      display: grid;
+      place-items: center left;
+    }
+    .next {
+      display: grid;
+      place-items: center right;
+    }
+  }
+
+  .imgGrid {
+    margin: 2rem auto;
+
+    @media (max-width: 767px) {
+        column-count: 1;
+        margin: 2rem;
+    }
+
+    .gatsby-image-wrapper {
+      width: 400px;
+      max-width: 100%;
+      margin: 0 auto;
+    }
+
+    .fImg {
+      width: auto;
+      height: auto;
+
+      @media (max-width: 767px) {
+          margin: 15px auto;
+      }
+    }
+  }
+
+  .perks-Sect {
+    margin: auto;
+    text-align: center;
+
+    @media (max-width: 767px) {
+        margin: auto 1rem;
+    }
+
+    h3 {
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 2.6rem;
+
+      @media (max-width: 767px) {
+          font-size: 2.3rem;
+      }
+    }
+
+    .perks {
+      color: black;
+      text-transform: capitalize;
+      text-align: left;
+      max-width: 80%;
+      margin: auto;
+
+      @media (max-width: 767px) {
+          max-width: 100%;
+      }
+
+      ul {
+        list-style: disc;
+        line-height: 1.2rem;
+        column-count: 2;
+        column-width: 50px;
+        column-gap: 1.5rem;
+        position: relative;
+        left: 6%;
+
+        @media (max-width: 1025px) {
+            left: 3%;
+        }
+
+        @media (max-width: 767px) {
+            column-count: 1;
+            left: 0%;
+        }
+
+        li {
+          margin: 6px;
+        }
+      }
+    }
+  }
+}
