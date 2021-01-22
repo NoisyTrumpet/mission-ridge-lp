@@ -59,9 +59,9 @@ const Layout = ({ children }) => (
               </p>
             </div>
             <div className={"links"}>
-              <Link to="/contact" title={"Contact Us"}>
+              {/* <Link to="/contact" title={"Contact Us"}>
                 Contact |{" "}
-              </Link>
+              </Link> */}
               <Link to="/privacy" title={"Privacy Policy"}>
                 Privacy
               </Link>
