@@ -1,1 +1,1 @@
-export { default as Facility } from "./facility" // eslint-disable-line import/prefer-default-export
+export { default as Facility } from "./Facility" // eslint-disable-line import/prefer-default-export
