@@ -94,6 +94,9 @@ body {
     background-color: #222222;
     display: grid;
     padding: 20px 0;
+    @media (max-width: 767px) {
+      padding: 10px 0px;
+  }
     align-items: center;
 
     .logo {

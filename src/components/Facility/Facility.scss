@@ -42,13 +42,8 @@
   .imgGrid {
     margin: 2rem auto;
 
-    @media (max-width: 767px) {
-        column-count: 1;
-        margin: 2rem;
-    }
-
     .gatsby-image-wrapper {
-      width: 400px;
+      width: 1200px;
       max-width: 100%;
       margin: 0 auto;
     }
@@ -93,10 +88,6 @@
       }
 
       ul {
-        @media (max-width: 767px) {
-          max-width: 400px;
-          margin: 0 auto;
-      }
         list-style: disc;
         line-height: 1.2rem;
         column-count: 2;
@@ -115,6 +106,7 @@
         }
 
         li {
+          padding-top: 5px;
           margin: 6px;
         }
       }

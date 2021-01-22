@@ -1,4 +1,6 @@
 .signup {
+    display: grid;
+    place-items: center;
     .text {
         text-align: center;
         h3 {
@@ -10,6 +12,7 @@
                 max-width: 80%;
                 margin: 0 auto;
             }
+            text-align: center;
         }
     }
 
@@ -21,10 +24,12 @@
         @media (max-width: 767px) {
             padding: 0px 20px;
         }
-        display: grid;
-        place-items: center;
+        max-width: 700px;
         margin-top: 20px;
         form {
+            p {
+                text-align: center;
+            }
             .fields {
                 display: grid;
                 grid-template-columns: 1fr 1fr;

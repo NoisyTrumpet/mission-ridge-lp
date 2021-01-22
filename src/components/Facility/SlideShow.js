@@ -1,5 +1,6 @@
-import React, { useState, useEffect, useRef } from "react"
+import React, { useState, useEffect } from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import { Animated } from "react-animated-css"
 import Img from "gatsby-image"
 
 const SlideShow = () => {
@@ -30,8 +31,8 @@ const SlideShow = () => {
   const length = allFile.edges.length - 1
   const handleNext = () =>
     index === length ? setIndex(0) : setIndex(index + 1)
-  const handlePrevious = () =>
-    index === 0 ? setIndex(length) : setIndex(index - 1)
+  // const handlePrevious = () =>
+  //   index === 0 ? setIndex(length) : setIndex(index - 1)
   const { node } = allFile.edges[index]
 
   useEffect(() => {
@@ -40,19 +41,18 @@ const SlideShow = () => {
     return () => clearTimeout(timeout)
   })
 
-  // useEffect({}, [])
-
   return (
-    <div>
-      <div>
-        <Img
-          fluid={node.childImageSharp.fluid}
-          key={node.id}
-          alt={node.name.replace(/-/g, " ").substring(2)}
-          autoPlay={2}
-        />
-      </div>
-    </div>
+    <Animated
+      animationIn="fadeInUp"
+      animationOut="fadeOutDown"
+      isVisible={true}
+    >
+      <Img
+        fluid={node.childImageSharp.fluid}
+        key={node.id}
+        alt={node.name.replace(/-/g, " ").substring(2)}
+      />
+    </Animated>
   )
 }
 

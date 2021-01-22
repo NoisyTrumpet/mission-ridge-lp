@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import addToMailchimp from "gatsby-plugin-mailchimp"
+import Interweave from "interweave"
 import "./Signup.scss"
 
 const Signup = () => {
@@ -99,7 +100,9 @@ const Signup = () => {
               onChange={handleChange}
             />
           </div>
-          {!serverState.submitting && <h5>{serverState.status}</h5>}
+          {!serverState.submitting && (
+            <Interweave content={serverState.status} />
+          )}
           <div className="button-wrapper">
             <button type="submit">KEEP ME IN THE LOOP</button>
           </div>
