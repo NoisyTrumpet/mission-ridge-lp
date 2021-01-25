@@ -69,11 +69,10 @@ const Form = () => {
           </div>
           <select
             className="input input-select reason-input"
-            placeholder="Reason"
             name="REASON"
             required
           >
-            <option disabled className="placeholder">
+            <option disabled selected className="placeholder">
               Reason
             </option>
             <option value="Join Our Team">Join Our Team</option>
