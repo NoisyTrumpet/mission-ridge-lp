@@ -24,7 +24,7 @@ const Contact = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              4340 Maple Shade Lane | Plano, TX | 75093
+              4340 Mapleshade Lane | Plano, TX | 75093
             </a>
             <a href="tel:972.703.9000">(972) 703-9000</a>
             <p>Access via Mapleshade Lane</p>
