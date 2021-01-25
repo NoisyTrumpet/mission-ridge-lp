@@ -70,7 +70,7 @@ const Form = () => {
           <select
             className="input input-select reason-input"
             name="REASON"
-            required
+            required="required"
           >
             <option disabled selected className="placeholder">
               Reason
