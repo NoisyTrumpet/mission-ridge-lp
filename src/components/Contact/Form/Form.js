@@ -73,7 +73,7 @@ const Form = () => {
             name="REASON"
             required
           >
-            <option selected disabled className="placeholder">
+            <option disabled className="placeholder">
               Reason
             </option>
             <option value="Join Our Team">Join Our Team</option>
