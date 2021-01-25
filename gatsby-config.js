@@ -4,7 +4,7 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `Mission Ridge Plano`,
+    title: `Mission Ridge DFW`,
     description: `North Texas' Premier Shooting Range & Event Center`,
     author: `Mission Ridge Gun Range`,
   },
@@ -58,7 +58,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Mission Ridge Plano`,
+        name: `Mission Ridge DFW`,
         short_name: `mission-ridge`,
         start_url: `/`,
         background_color: `#663399`,
