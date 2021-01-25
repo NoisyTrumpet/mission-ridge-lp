@@ -58,14 +58,6 @@ const Layout = ({ children }) => (
                 world-class shooting facility!
               </p>
             </div>
-            <div className={"links"}>
-              {/* <Link to="/contact" title={"Contact Us"}>
-                Contact |{" "}
-              </Link> */}
-              <Link to="/privacy" title={"Privacy Policy"}>
-                Privacy
-              </Link>
-            </div>
 
             <div className="social">
               <a
@@ -113,8 +105,11 @@ const Layout = ({ children }) => (
             <div className={"copyright"}>
               <p>
                 © Copyright {new Date().getFullYear()}, {` `} Mission Ridge
-                Range & Academy | DFW. All rights reserved.
+                Range & Academy | DFW. All rights reserved.{` `}
               </p>
+              <Link to="/privacy" title={"Privacy Policy"}>
+                Privacy
+              </Link>
             </div>
           </div>
         </footer>
