@@ -71,13 +71,13 @@ const Form = () => {
             className="input input-select reason-input"
             placeholder="Reason"
             name="REASON"
+            required
           >
             <option
               value="Select"
               defaultValue=""
               disabled=""
               className="placeholder"
-              required
             >
               Reason
             </option>
