@@ -1,7 +1,14 @@
 import React, { useState } from "react"
-import addToMailchimp from "gatsby-plugin-mailchimp"
 
 const Form = () => {
+  const [status, setStatus] = useState(false)
+
+  const handleReason = e => {
+    if (e.target.value !== "Reason") {
+      setStatus(true)
+    }
+  }
+
   return (
     <section className="signup">
       <div className="text">
@@ -70,17 +77,12 @@ const Form = () => {
           </div>
           <select
             className="input input-select reason-input"
-            placeholder="Reason"
             name="REASON"
+            required="required"
+            onChange={handleReason}
           >
-            <option
-              value="Select"
-              defaultValue=""
-              disabled=""
-              className="placeholder"
-              required
-            >
-              Reason
+            <option disabled selected className="placeholder">
+              Reason (Required)
             </option>
             <option value="Join Our Team">Join Our Team</option>
             <option value="Memberships">Memberships</option>
@@ -92,12 +94,18 @@ const Form = () => {
             id="message"
             name="CONTENT"
             placeholder="Message"
-            required
+            required="required"
           ></textarea>
 
           <div className="email-wrapper"></div>
           <div className="button-wrapper">
-            <button type="submit">Contact</button>
+            {status ? (
+              <button type="submit">Contact</button>
+            ) : (
+              <button type="submit" disabled className="disabled">
+                Contact
+              </button>
+            )}
           </div>
         </form>
       </div>

@@ -1,5 +1,14 @@
 $break-small: 719px;
 
+input {
+  width: -webkit-fill-available;
+  margin-top: 5px;
+}
+
+
+#___gatsby {
+  overflow-x: hidden;
+}
 
 // ----
 // libsass (v3.2.5)
@@ -411,9 +420,10 @@ body {
       }
     }
 
-    p, .links {
+    p:first-of-type {
       text-align: center;
-      margin-bottom: 30px;
+      max-width: 90%;
+      margin: 0 auto 20px auto;
       line-height: 20px;
     }
 
@@ -510,15 +520,10 @@ body {
 
     .copyright {
       text-align: center;
-      margin-top: 90px;
 
-      @media screen and (max-width: $break-small) {
-        margin-top: 31px;
-      }
+      margin-top: 31px!important;
 
-      p {
-        font-size: 13px;
-      }
+      font-size: 13px;
     }
   }
 }

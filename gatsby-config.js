@@ -58,7 +58,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Mission Ridge Plano`,
+        name: `Mission Ridge DFW`,
         short_name: `mission-ridge`,
         start_url: `/`,
         background_color: `#663399`,
