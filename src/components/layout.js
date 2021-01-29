@@ -10,6 +10,7 @@ import PropTypes from "prop-types"
 import { StaticQuery, graphql, Link } from "gatsby"
 
 import Header from "./header"
+import SEO from "../components/seo"
 import "../../static/styles/main.scss"
 import logo from "../../static/images/logo_maroon.svg"
 import iconYoutube from "../../static/images/youtube.svg"
@@ -29,8 +30,8 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
+        <SEO title="" description="" />
         <Header siteTitle={data.site.siteMetadata.title} />
-
         <link
           rel="stylesheet"
           href="https://use.typekit.net/ujo8xej.css"
