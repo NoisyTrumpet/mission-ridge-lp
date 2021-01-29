@@ -26,7 +26,7 @@ const Facility = () => {
               <li>Over 100 rental firearms & bows</li>
               <li>Archery range & pro shop</li>
               <li>Large retail store with firearms & ammo</li>
-              <li>On-site full-time experienced gunsmith</li>
+              <li>On-site full-time, experienced gunsmith</li>
             </ul>
           </div>
         </div>
