@@ -30,7 +30,6 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
-        <SEO title="" description="" />
         <Header siteTitle={data.site.siteMetadata.title} />
         <link
           rel="stylesheet"
