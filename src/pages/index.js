@@ -10,10 +10,10 @@ import SEO from "../components/seo"
 
 const IndexPage = () => (
   <Layout>
-    <SEO
+    {/* <SEO
       title="Mission Ridge Range & Academy DFW | Plano Gun Range"
       description="Mission Ridge Range & Academy in Plano, Texas is opening soon to the public! Sign up to stay updated on DFW’s premiere gun range for all shooters."
-    />
+    /> */}
     <Hero />
     <Signup />
     <Picture />
