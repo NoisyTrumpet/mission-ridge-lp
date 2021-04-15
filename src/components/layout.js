@@ -28,8 +28,12 @@ const Layout = ({ children }) => (
         }
       }
     `}
-    render={data => (
+    render={(data) => (
       <>
+        <SEO
+          title={data.site.siteMetadata.title}
+          description={data.site.siteMetadata.description}
+        />
         <Header siteTitle={data.site.siteMetadata.title} />
         <link
           rel="stylesheet"

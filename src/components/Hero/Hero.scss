@@ -6,6 +6,7 @@
     .hero-image {
         display: grid;
         padding: 300px 0;
+
         @media (max-width: 767px) {
             padding: 150px 0;
         }

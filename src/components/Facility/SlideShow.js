@@ -1,31 +1,28 @@
 import React, { useState, useEffect } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { Animated } from "react-animated-css"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image";
 
 const SlideShow = () => {
   const [index, setIndex] = useState(0)
   const { allFile } = useStaticQuery(
-    graphql`
-      query {
-        allFile(
-          sort: { fields: name, order: DESC }
-          filter: { relativeDirectory: { eq: "Facility" } }
-        ) {
-          edges {
-            node {
-              id
-              name
-              childImageSharp {
-                fluid(quality: 90, maxWidth: 1920) {
-                  ...GatsbyImageSharpFluid_withWebp
-                }
-              }
-            }
-          }
+    graphql`{
+  allFile(
+    sort: {fields: name, order: DESC}
+    filter: {relativeDirectory: {eq: "Facility"}}
+  ) {
+    edges {
+      node {
+        id
+        name
+        childImageSharp {
+          gatsbyImageData(quality: 90, layout: FULL_WIDTH)
         }
       }
-    `
+    }
+  }
+}
+`
   )
 
   const length = allFile.edges.length - 1
@@ -47,13 +44,12 @@ const SlideShow = () => {
       animationOut="fadeOutDown"
       isVisible={true}
     >
-      <Img
-        fluid={node.childImageSharp.fluid}
+      <GatsbyImage
+        image={node.childImageSharp.gatsbyImageData}
         key={node.id}
-        alt={node.name.replace(/-/g, " ").substring(2)}
-      />
+        alt={node.name.replace(/-/g, " ").substring(2)} />
     </Animated>
-  )
+  );
 }
 
 export default SlideShow

@@ -1,33 +1,29 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image";
 import "./Picture.scss"
 
 const Picture = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      desktop: file(relativePath: { eq: "rendering.png" }) {
-        childImageSharp {
-          fluid(quality: 90, maxWidth: 1920) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
-        }
-      }
+  const data = useStaticQuery(graphql`{
+  desktop: file(relativePath: {eq: "rendering.png"}) {
+    childImageSharp {
+      gatsbyImageData(quality: 90, layout: FULL_WIDTH)
     }
-  `)
+  }
+}
+`)
 
   const backgroundFluidImageStack = [
-    data.desktop.childImageSharp.fluid,
+    data.desktop.childImageSharp.gatsbyImageData,
     `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2))`,
   ].reverse()
 
   return (
     <section className="rendering-section">
-      <Img
-        fluid={backgroundFluidImageStack}
+      <GatsbyImage
+        image={backgroundFluidImageStack}
         alt="Mission Ridge-DFW building"
-        className="render-image"
-      />
+        className="render-image" />
       <div>
         <p>
           Coming Soon - North Texas' state-of-the-art, family-friendly shooting
@@ -38,7 +34,7 @@ const Picture = () => {
         </p>
       </div>
     </section>
-  )
+  );
 }
 
 export default Picture

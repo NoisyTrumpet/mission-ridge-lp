@@ -1,26 +1,34 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
+import { getImage } from "gatsby-plugin-image"
+import { convertToBgImage } from "gbimage-bridge"
+
 import BackgroundImage from "gatsby-background-image"
 import { Animated } from "react-animated-css"
 import "./Hero.scss"
 
 const Hero = () => {
-  const data = useStaticQuery(
+  const placeHolderImage = useStaticQuery(
     graphql`
-      query {
-        desktop: file(relativePath: { eq: "hero.png" }) {
-          childImageSharp {
-            fluid(quality: 90, maxWidth: 1920) {
-              ...GatsbyImageSharpFluid_withWebp
-            }
-          }
+    query {
+      placeholderImage: file(relativePath: { eq: "hero.png" }) {
+        childImageSharp {
+          gatsbyImageData(
+            width: 1920,
+            placeholder: BLURRED,
+            formats: [AUTO, WEBP, AVIF]
+          )
         }
       }
-    `
+    }
+`
   )
 
+  const image = getImage(placeHolderImage.placeholderImage)
+  const bgImage = convertToBgImage(image)
+
   const backgroundFluidImageStack = [
-    data.desktop.childImageSharp.fluid,
+    bgImage,
     `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2))`,
   ].reverse()
 
@@ -29,7 +37,8 @@ const Hero = () => {
       <BackgroundImage
         Tag="div"
         className="hero-image"
-        fluid={backgroundFluidImageStack}
+        {...bgImage}
+        preserveStackingContent
       >
         <section className="hero-content">
           <Animated
