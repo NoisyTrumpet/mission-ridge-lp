@@ -10,7 +10,7 @@ import { Facility } from "../components/Facility"
 const IndexPage = () => (
   <Layout>
     <Hero />
-    <Signup />
+    {/* <Signup /> */}
     <Picture />
     <Facility />
     <Contact />

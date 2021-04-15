@@ -5,20 +5,30 @@
 
     .hero-image {
         display: grid;
-        padding: 300px 0;
-
-        @media (max-width: 767px) {
-            padding: 150px 0;
-        }
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 0px 0px;
+        grid-template-areas:
+            ". .";
+        padding: 150px 0;
         place-items: center;
 
         .hero-content {
             padding-left: 35px;
             border-left: 4px solid #ff3f14;
-            h1, h3 {
+
+            h1,
+            h3 {
                 margin: 0;
                 color: white;
                 text-transform: uppercase;
+            }
+
+            .hero-form-section {
+                display: grid !important;
+                place-items: center;
+
+
             }
 
             max-width: 675px;
@@ -32,8 +42,9 @@
             @media (max-width: 767px) {
                 max-width: 90%;
                 padding-left: 15px;
+
                 h1 {
-                    font-size: 20px!important;
+                    font-size: 20px !important;
                 }
             }
         }

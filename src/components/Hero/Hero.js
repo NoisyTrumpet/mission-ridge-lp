@@ -1,10 +1,11 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import { getImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { convertToBgImage } from "gbimage-bridge"
 
 import BackgroundImage from "gatsby-background-image"
 import { Animated } from "react-animated-css"
+import HeroForm from "../HeroForm/HeroForm"
 import "./Hero.scss"
 
 const Hero = () => {
@@ -16,7 +17,7 @@ const Hero = () => {
           gatsbyImageData(
             width: 1920,
             placeholder: BLURRED,
-            formats: [AUTO, WEBP, AVIF]
+            formats: [AUTO, WEBP, AVIF, PNG]
           )
         }
       }
@@ -28,7 +29,7 @@ const Hero = () => {
   const bgImage = convertToBgImage(image)
 
   const backgroundFluidImageStack = [
-    bgImage,
+    bgImage.fluid,
     `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2))`,
   ].reverse()
 
@@ -37,9 +38,12 @@ const Hero = () => {
       <BackgroundImage
         Tag="div"
         className="hero-image"
-        {...bgImage}
+        fluid={backgroundFluidImageStack}
         preserveStackingContent
       >
+        <section className="hero-form-section">
+          <HeroForm />
+        </section>
         <section className="hero-content">
           <Animated
             animationIn="fadeInUp"

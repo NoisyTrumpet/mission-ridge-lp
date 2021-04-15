@@ -1,0 +1,147 @@
+.hero-form {
+    background-color: #f1efef;
+    padding: 40px 30px;
+    border-radius: 12px;
+    margin: 0px 50px;
+
+    .text {
+        text-align: center;
+
+        h3 {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 55px;
+            line-height: 60px;
+
+            span {
+                color: #fc3f13
+            }
+
+            margin: 0px !important;
+        }
+
+        p {
+            color: #333;
+            margin: 20px auto;
+            max-width: 500px;
+        }
+    }
+
+    .membership-levels {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 0px 0px;
+        grid-template-areas:
+            ". .";
+
+        .title {
+            display: grid;
+            place-items: center;
+
+            h4 {
+                margin: 0 !important;
+            }
+        }
+
+        .features {
+            ul {
+                list-style: none;
+                box-shadow: -4px 0px 0px 0px #fc3f13;
+
+
+                li {
+                    position: relative;
+                    margin: 10px 0 10px 30px;
+                    color: #333;
+
+                }
+
+                li::before {
+                    content: '▶';
+                    font-size: 10px;
+                    color: #333;
+                    position: absolute;
+                    top: 4px;
+                    left: -15px;
+
+                }
+            }
+        }
+    }
+
+    .form {
+        .fields {
+
+            .name,
+            .email-wrapper {
+                display: flex;
+                margin: 10px 0;
+
+                label {
+                    font-family: 'industry' !important;
+                    line-height: 43px;
+                    font-weight: 900;
+                    margin-right: 20px;
+                    color: #1E1C21;
+                    text-transform: uppercase;
+                }
+
+                input {
+                    padding: 0px;
+                    margin: 0px !important;
+                    border: none;
+                }
+            }
+
+            .email-wrapper {
+                label {
+                    margin-right: 17px;
+                }
+            }
+        }
+
+        .button-wrapper {
+            width: 100%;
+            display: grid;
+            place-items: center;
+
+            button {
+                margin: 20px auto;
+            }
+
+            button {
+                background-color: #fc3f14;
+                border: 2px solid #fc3f14;
+                padding: 10px 30px;
+                color: white;
+                text-transform: uppercase;
+                margin-top: 20px;
+                text-align: center;
+                transition: 0.3s all;
+                font-family: "industry";
+                font-weight: 900;
+
+                &:hover {
+                    background-color: white;
+                    color: #fc3f14;
+                    border: 2px solid #fc3f14;
+                    transition: 0.3s all;
+                    cursor: pointer;
+                }
+
+                &.disabled {
+                    background-color: #fc3f14;
+                    opacity: 0.5;
+                    border: 2px solid #fc3f14;
+                    padding: 10px 30px;
+                    color: white;
+                    text-transform: uppercase;
+                    margin-top: 20px;
+                    text-align: center;
+                    transition: 0.3s all;
+                }
+            }
+        }
+    }
+}

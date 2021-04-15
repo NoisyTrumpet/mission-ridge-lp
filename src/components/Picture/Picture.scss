@@ -1,8 +1,11 @@
 .rendering-section {
     margin: 0 auto;
 
+    .gatsby-image-wrapper > div[aria-hidden="true"] {
+        padding-top: 0px!important;
+      }
+
     .render-image {
-        margin-top: 30px;
         picture {
             img {
                 position: relative!important;
