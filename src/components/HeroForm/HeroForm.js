@@ -21,8 +21,9 @@ const HeroForm = () => {
     setServerState({ submitting: true })
 
     addToMailchimp(form.email.value, {
-      FNAME: form.FNAME.value,
-      LNAME: form.LNAME.value,
+      NAME: form.NAME.value,
+      FNAME: form.NAME.value.split(' ').length > 0 && form.NAME.value.split(' ')[0],
+      LNAME: form.NAME.value.split(' ').length > 0 ? form.NAME.value.split(' ')[1] : 'last name not entered'
     })
       .then(response => {
         console.log(response)
@@ -77,14 +78,14 @@ const HeroForm = () => {
         <form onSubmit={handleOnSubmit}>
           <div className="fields">
             <div className="name">
-              <label className="label label-name" htmlFor="name">
+              <label className="label label-name" htmlFor="NAME">
                 Name
               </label>
               <input
                 className="input name-input"
                 id="name"
                 type="name"
-                name="name"
+                name="NAME"
                 required
                 onChange={handleChange}
               />
