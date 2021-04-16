@@ -10,7 +10,7 @@ const Facility = () => {
       </div>
 
       <div className="perks-sect">
-        <h3>Inside our 30,000 sq ft facility</h3>
+        <h4>Inside our 30,000 sq ft facility</h4>
         <div className="perks">
           <div className="perks-sub">
             <ul>

@@ -135,7 +135,7 @@ const HeroForm = () => {
               Email
             </label>
             <input
-              className="input email-input"
+              className="input email-input hero-form-input"
               id="email"
               type="email"
               name="email"

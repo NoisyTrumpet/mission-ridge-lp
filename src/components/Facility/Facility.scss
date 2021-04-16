@@ -20,6 +20,7 @@
       margin-top: 20px;
       text-align: center;
       transition: 0.3s all;
+
       &:hover {
         background-color: white;
         color: #fc3f14;
@@ -28,10 +29,12 @@
         cursor: pointer;
       }
     }
+
     .prev {
       display: grid;
       place-items: center left;
     }
+
     .next {
       display: grid;
       place-items: center right;
@@ -65,7 +68,7 @@
       margin: auto 20px;
     }
 
-    h3 {
+    h4 {
       text-transform: uppercase;
       font-weight: bold;
       font-size: 2.6rem;
