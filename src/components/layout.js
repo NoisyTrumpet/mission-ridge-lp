@@ -13,9 +13,10 @@ import Header from "./header"
 import SEO from "../components/seo"
 import "../../static/styles/main.scss"
 import logo from "../../static/images/logo_maroon.svg"
-import iconYoutube from "../../static/images/youtube.svg"
-import iconInstagram from "../../static/images/icon-instagram.svg"
-import iconFacebook from "../../static/images/icon-facebook.svg"
+import YouTube from "./Social/Fragments/YouTube"
+import Facebook from "./Social/Fragments/Facebook"
+import Instagram from "./Social/Fragments/Instagram"
+import Logo from "./SVGComps/Logo"
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -48,12 +49,12 @@ const Layout = ({ children }) => (
           <div className={"container"}>
             <div className={"logo"}>
               <Link to="/" title={"HiStaff"}>
-                <img alt={"Logo"} src={logo} />
+                <Logo />
               </Link>
             </div>
 
             <div className={"about"}>
-              <p>
+              <p style={{color: '#333'}}>
                 Coming Soon - North Texas' state-of-the-art, family-friendly
                 shooting center and event venue. Our 30,000 square foot facility
                 will offer pistol, rifle and archery ranges with a virtual
@@ -70,7 +71,7 @@ const Layout = ({ children }) => (
                 rel="noreferrer"
                 title={"Facebook"}
               >
-                <img alt={"Facebook"} src={iconFacebook} />
+                <Facebook />
               </a>
               <a
                 href="https://www.youtube.com/channel/UC5LaBuUcQPfdKbAuevQJEBQ"
@@ -78,35 +79,19 @@ const Layout = ({ children }) => (
                 rel="noreferrer"
                 title={"YoutTube"}
               >
-                <img alt={"YoutTube"} src={iconYoutube} />
+                <YouTube />
               </a>
-              {/* <a
-                      href="https://www.linkedin.com/company/histaff/"
-                      target="_blank"
-                      rel={"noreferrer"}
-                      title={"LinkedIn"}
-                    >
-                      <img alt={"LinkedIn"} src={iconLinkedin} />
-                    </a>
-                    <a
-                      href="https://github.com/histaff"
-                      target="_blank"
-                      rel={"noreferrer"}
-                      title={"GitHub"}
-                    >
-                      <img alt={"GitHub"} src={iconGitHub} />
-                    </a> */}
               <a
                 href="https://www.instagram.com/missionridgerange/"
                 target="_blank"
                 rel={"noreferrer"}
                 title={"Instagram"}
               >
-                <img alt={"Instagram"} src={iconInstagram} />
+                <Instagram />
               </a>
             </div>
 
-            <p className="copyright">
+            <p className="copyright" style={{color: '#333'}}>
               © Copyright {new Date().getFullYear()}, {` `} Mission Ridge Range
               & Academy All rights reserved.
               <br />

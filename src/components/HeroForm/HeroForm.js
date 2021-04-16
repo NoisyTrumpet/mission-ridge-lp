@@ -46,7 +46,7 @@ const HeroForm = () => {
         }
         setServerState({
           submitting: false,
-          status: response.msg,
+          status: `Looks like you've already been entered to win. Got any other questions? Check out the contact form at the bottom of the page.`,
         })
 
       })
@@ -146,7 +146,9 @@ const HeroForm = () => {
           </div>
 
           {!serverState.submitting && (
-            <Interweave content={serverState.status} />
+            <section className="error">
+              <Interweave content={serverState.status} />
+            </section>
           )}
           <div className="button-wrapper">
             <button type="submit">ENTER ME!</button>

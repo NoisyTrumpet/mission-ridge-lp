@@ -2,7 +2,6 @@
     position: relative;
     height: fit-content;
     display: grid;
-    text-align: center;
 
     .social {
         display: grid;
@@ -11,10 +10,6 @@
         gap: 0px 20px;
         grid-template-areas:
             ". . .";
-
-        svg {
-            fill: #fff;
-        }
     }
 
     .hero-content {
@@ -55,12 +50,13 @@
 
         @media (max-width: 767px) {
             grid-template-columns: 1fr !important;
-            grid-template-rows: 0.5fr 1fr !important;
+            grid-template-rows: 0.5fr fit-content !important;
             padding: 0 !important;
             grid-template-areas:
                 "."
                 ".";
             grid-auto-flow: column;
+
         }
 
         .hero-content {
@@ -94,6 +90,7 @@
                 padding-left: 15px;
                 order: 1 !important;
                 grid-column-start: 1;
+                margin: 50px 0 40px 0;
 
                 h1 {
                     font-size: 20px !important;

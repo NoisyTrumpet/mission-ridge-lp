@@ -6,7 +6,7 @@ import { Hero } from "../components/Hero"
 const ThankYou = () => (
   <Layout>
     <SEO title="Thank You!" />
-      <Hero thankYou />
+    <Hero thankYou />
   </Layout>
 )
 
