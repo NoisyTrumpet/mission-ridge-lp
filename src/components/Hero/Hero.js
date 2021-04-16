@@ -50,7 +50,7 @@ const Hero = () => {
             animationOut="fadeOutDown"
             isVisible={true}
           >
-            <h3> Coming Soon Spring 2021!</h3>
+            <h3>Coming Soon!</h3>
           </Animated>
           <Animated
             animationIn="fadeInUp"

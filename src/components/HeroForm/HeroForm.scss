@@ -4,6 +4,10 @@
     border-radius: 12px;
     margin: 0px 50px;
 
+    @media (max-width: 767px) {
+        margin: 10px 10px;
+    }
+
     .text {
         text-align: center;
 
@@ -13,8 +17,14 @@
             font-size: 55px;
             line-height: 60px;
 
+            @media (max-width: 767px) {
+                font-size: 30px !important;
+                line-height: 35px;
+            }
+
             span {
-                color: #fc3f13
+                color: #fc3f13;
+                width: 5px;
             }
 
             margin: 0px !important;
@@ -24,6 +34,10 @@
             color: #333;
             margin: 20px auto;
             max-width: 500px;
+
+            @media (max-width: 767px) {
+                line-height: 25px;
+            }
         }
     }
 
@@ -35,26 +49,48 @@
         grid-template-areas:
             ". .";
 
+        @media (max-width: 767px) {
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-template-areas:
+                "."
+                ".";
+            max-height: min-content !important;
+            height: fit-content !important;
+        }
+
         .title {
             display: grid;
             place-items: center;
 
             h4 {
                 margin: 0 !important;
+
+                @media (max-width: 767px) {
+                    box-shadow: 0 0 0 -4px #fc3f13 !important;
+                }
             }
         }
 
         .features {
+
+            @media (max-width: 767px) {
+                margin: 0 auto;
+                height: fit-content;
+            }
+
             ul {
                 list-style: none;
                 box-shadow: -4px 0px 0px 0px #fc3f13;
 
+                @media (max-width: 767px) {
+                    margin: -1rem 0 1rem 0;
+                }
 
                 li {
                     position: relative;
                     margin: 10px 0 10px 30px;
                     color: #333;
-
                 }
 
                 li::before {
@@ -64,19 +100,28 @@
                     position: absolute;
                     top: 4px;
                     left: -15px;
-
                 }
             }
         }
     }
 
     .form {
+
+        @media (max-width: 767px) {
+            width: 90%;
+            margin: 0 auto;
+        }
+
         .fields {
 
             .name,
             .email-wrapper {
                 display: flex;
                 margin: 10px 0;
+
+                @media (max-width: 767px) {
+                    display: block;
+                }
 
                 label {
                     font-family: 'industry' !important;
@@ -85,18 +130,33 @@
                     margin-right: 20px;
                     color: #1E1C21;
                     text-transform: uppercase;
+
+                    @media (max-width: 767px) {
+                        line-height: 35px;
+                        margin-right: 15px;
+                    }
                 }
 
                 input {
                     padding: 0px;
                     margin: 0px !important;
                     border: none;
+
+                    @media (max-width: 767px) {
+                        height: 30px;
+                        width: 75%;
+                    }
                 }
             }
 
             .email-wrapper {
                 label {
                     margin-right: 17px;
+
+                    @media (max-width: 767px) {
+                        line-height: 35px;
+                        margin-right: 15px;
+                    }
                 }
             }
         }
@@ -105,6 +165,10 @@
             width: 100%;
             display: grid;
             place-items: center;
+
+            @media (max-width: 767px) {
+                margin: 0 auto;
+            }
 
             button {
                 margin: 20px auto;
