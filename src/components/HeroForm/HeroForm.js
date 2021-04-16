@@ -46,7 +46,7 @@ const HeroForm = () => {
         }
         setServerState({
           submitting: false,
-          status: `Looks like you've already been entered to win. Got any other questions? Check out the contact form at the bottom of the page.`,
+          status: `Looks like you've already been entered to win. If you have any questions on memberships, joining our team or general questions please fill out the form at the bottom of the page.`,
         })
 
       })
