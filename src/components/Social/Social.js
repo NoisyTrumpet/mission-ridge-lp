@@ -1,4 +1,4 @@
-import React from "React"
+import React from "react"
 import Facebook from "./Fragments/Facebook.js"
 import Instagram from "./Fragments/Instagram.js"
 import YouTube from "./Fragments/YouTube.js"
