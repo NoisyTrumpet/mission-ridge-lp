@@ -1,23 +1,23 @@
 .rendering-section {
-    margin: 0 auto;
+  margin: 0 auto;
 
-    .gatsby-image-wrapper > div[aria-hidden="true"] {
-        padding-top: 0px!important;
+  .gatsby-image-wrapper > div[aria-hidden="true"] {
+    padding-top: 0px !important;
+  }
+
+  .render-image {
+    picture {
+      img {
+        position: relative !important;
       }
-
-    .render-image {
-        picture {
-            img {
-                position: relative!important;
-            }
-        }
     }
+  }
 
-    p {
-        max-width: 90%;
-        width: 800px;
-        text-align: center;
-        margin: 30px auto 0 auto;
-        line-height: 30px;
-    }
+  p {
+    max-width: 90%;
+    width: 800px;
+    text-align: center;
+    margin: 30px auto 0 auto;
+    line-height: 30px;
+  }
 }

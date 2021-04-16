@@ -7,27 +7,26 @@
     max-width: 400px;
     width: 100%;
     display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  gap: 0px 0px;
-  grid-template-areas:
-    ". .";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas: ". .";
 
     button {
       background-color: #fc3f14;
-                    border: 2px solid #fc3f14;
-                    padding: 5px 10px;
-                    color: white;
-                    margin-top: 20px;
-                    text-align: center;
-                    transition: 0.3s all;
-                    &:hover {
-                        background-color: white;
-                        color: #fc3f14;
-                        border: 2px solid #fc3f14;
-                        transition: 0.3s all;
-                        cursor: pointer;
-                    }
+      border: 2px solid #fc3f14;
+      padding: 5px 10px;
+      color: white;
+      margin-top: 20px;
+      text-align: center;
+      transition: 0.3s all;
+      &:hover {
+        background-color: white;
+        color: #fc3f14;
+        border: 2px solid #fc3f14;
+        transition: 0.3s all;
+        cursor: pointer;
+      }
     }
     .prev {
       display: grid;
@@ -53,7 +52,7 @@
       height: auto;
 
       @media (max-width: 767px) {
-          margin: 15px auto;
+        margin: 15px auto;
       }
     }
   }
@@ -63,7 +62,7 @@
     text-align: center;
 
     @media (max-width: 767px) {
-        margin: auto 20px;
+      margin: auto 20px;
     }
 
     h3 {
@@ -73,7 +72,7 @@
       margin-bottom: 10px;
 
       @media (max-width: 767px) {
-          font-size: 2.3rem;
+        font-size: 2.3rem;
       }
     }
 
@@ -83,23 +82,23 @@
       place-items: middle;
 
       @media (max-width: 768px) {
-          // max-width: max-content;
-          // max-height: fit-content;
-          padding: 0 20px;
-          grid-template-rows: auto 1fr;
-          grid-template-columns: 1fr;
-          margin: 0 auto;
-          line-height: 21px;
-
-          .perks-sub {
-            margin-bottom: 1rem;
-          }
-      }
+        // max-width: max-content;
+        // max-height: fit-content;
+        padding: 0 20px;
+        grid-template-rows: auto 1fr;
+        grid-template-columns: 1fr;
+        margin: 0 auto;
+        line-height: 21px;
 
         .perks-sub {
-          max-width: max-content !important;
-          max-height: fit-content !important;
-          margin: 0 auto;
+          margin-bottom: 1rem;
+        }
+      }
+
+      .perks-sub {
+        max-width: max-content !important;
+        max-height: fit-content !important;
+        margin: 0 auto;
 
         ul {
           list-style: disc;
@@ -108,7 +107,7 @@
           @media (min-width: 767px) {
             max-width: 90%;
             margin: 20px auto 0 auto;
-            column-count:3;
+            column-count: 3;
           }
 
           li {

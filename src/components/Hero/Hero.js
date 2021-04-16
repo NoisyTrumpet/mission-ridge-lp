@@ -49,7 +49,7 @@ const Hero = ({thankYou}) => {
           <h1>Thank You!</h1>
           </Fade>
 
-        <h3>Please be on the lookout for when we announce the winner by checking us out on social media</h3>
+        <h3>Please be on the lookout for the winner announcement by checking us out on social media.</h3>
         <Social />
         </section>
       </BackgroundImage>

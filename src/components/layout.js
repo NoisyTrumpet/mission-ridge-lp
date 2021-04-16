@@ -54,7 +54,7 @@ const Layout = ({ children }) => (
             </div>
 
             <div className={"about"}>
-              <p style={{color: '#333'}}>
+              <p style={{ color: "#333" }}>
                 Coming Soon - North Texas' state-of-the-art, family-friendly
                 shooting center and event venue. Our 30,000 square foot facility
                 will offer pistol, rifle and archery ranges with a virtual
@@ -91,7 +91,7 @@ const Layout = ({ children }) => (
               </a>
             </div>
 
-            <p className="copyright" style={{color: '#333'}}>
+            <p className="copyright" style={{ color: "#333" }}>
               © Copyright {new Date().getFullYear()}, {` `} Mission Ridge Range
               & Academy All rights reserved.
               <br />

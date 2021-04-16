@@ -1,151 +1,139 @@
 .signup {
-    display: grid;
-    place-items: center;
-    .text {
+  display: grid;
+  place-items: center;
+  .text {
+    text-align: center;
+    h3 {
+      text-transform: uppercase;
+      max-width: 90%;
+      margin: 20px auto 0 auto;
+    }
+
+    p {
+      @media (max-width: 767px) {
+        max-width: 80%;
+        margin: 0 auto;
+      }
+      text-align: center;
+    }
+  }
+
+  h5 {
+    text-align: center;
+    margin: 0;
+  }
+  .form {
+    @media (max-width: 767px) {
+      padding: 0px 20px;
+    }
+    max-width: 700px;
+    margin-top: 20px;
+    form {
+      p {
         text-align: center;
-        h3 {
+      }
+      .fields {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 0px 20px;
+        grid-template-areas: ". .";
+        .name {
+          .label {
+            margin-right: 15px;
             text-transform: uppercase;
-            max-width: 90%;
-            margin: 20px auto 0 auto;
-        }
-
-        p {
             @media (max-width: 767px) {
-                max-width: 80%;
-                margin: 0 auto;
+              display: block;
+              margin-bottom: 5px;
             }
-            text-align: center;
-        }
-    }
+          }
 
-    h5 {
-        text-align: center;
-        margin: 0;
-    }
-    .form {
-        @media (max-width: 767px) {
-            padding: 0px 20px;
+          .input {
+            border: none;
+            background-color: #f1efef;
+            padding: 5px 0;
+          }
         }
-        max-width: 700px;
+
+        .lname {
+          .label {
+            margin-right: 15px;
+            text-transform: uppercase;
+            @media (max-width: 767px) {
+              display: block;
+              margin-bottom: 5px;
+            }
+          }
+
+          .input {
+            border: none;
+            background-color: #f1efef;
+            padding: 5px 0;
+          }
+        }
+      }
+
+      .email-wrapper {
+        display: grid;
         margin-top: 20px;
-        form {
-            p {
-                text-align: center;
-            }
-            .fields {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                grid-template-rows: 1fr;
-                gap: 0px 20px;
-                grid-template-areas:
-                    ". .";
-                .name {
-                    .label {
-                        margin-right: 15px;
-                        text-transform: uppercase;
-                        @media (max-width: 767px) {
-                            display: block;
-                            margin-bottom: 5px;
-                        }
-                    }
-
-                    .input {
-                        border: none;
-                        background-color: #f1efef;
-                        padding: 5px 0;
-
-
-                    }
-                }
-
-                .lname {
-                    .label {
-                        margin-right: 15px;
-                        text-transform: uppercase;
-                        @media (max-width: 767px) {
-                            display: block;
-                            margin-bottom: 5px;
-                        }
-                    }
-
-
-
-                    .input {
-                        border: none;
-                        background-color: #f1efef;
-                        padding: 5px 0;
-
-
-                    }
-                }
-
-
-            }
-
-            .email-wrapper {
-                display: grid;
-                margin-top: 20px;
-                grid-template-columns: 0.3fr 1.7fr;
-                grid-template-rows: 1fr;
-                gap: 0px 0px;
-                grid-template-areas:
-                  ". .";
-                  align-items: center;
-                  @media (max-width: 767px) {
-                    display: block;
-                }
-
-                  .label {
-                      text-transform: uppercase;
-                      @media (max-width: 767px) {
-                        display: block;
-                        margin-bottom: 5px;
-                    }
-                  }
-                  .input {
-                    border: none;
-                    background-color: #f1efef;
-                    padding: 5px 0;
-                    width: 100%;
-                  }
-
-            }
-
-            .button-wrapper {
-                display: grid;
-                place-items: center;
-
-
-                button {
-                    background-color: #fc3f14;
-                    border: 2px solid #fc3f14;
-                    padding: 10px 30px;
-                    color: white;
-                    text-transform: uppercase;
-                    margin-top: 20px;
-                    text-align: center;
-                    transition: 0.3s all;
-                    &:hover {
-                        background-color: white;
-                        color: #fc3f14;
-                        border: 2px solid #fc3f14;
-                        transition: 0.3s all;
-                        cursor: pointer;
-                    }
-
-                    &.disabled {
-                        background-color: #fc3f14;
-                        opacity: 0.5;
-                    border: 2px solid #fc3f14;
-                    padding: 10px 30px;
-                    color: white;
-                    text-transform: uppercase;
-                    margin-top: 20px;
-                    text-align: center;
-                    transition: 0.3s all;
-                    }
-                }
-            }
+        grid-template-columns: 0.3fr 1.7fr;
+        grid-template-rows: 1fr;
+        gap: 0px 0px;
+        grid-template-areas: ". .";
+        align-items: center;
+        @media (max-width: 767px) {
+          display: block;
         }
+
+        .label {
+          text-transform: uppercase;
+          @media (max-width: 767px) {
+            display: block;
+            margin-bottom: 5px;
+          }
+        }
+        .input {
+          border: none;
+          background-color: #f1efef;
+          padding: 5px 0;
+          width: 100%;
+        }
+      }
+
+      .button-wrapper {
+        display: grid;
+        place-items: center;
+
+        button {
+          background-color: #fc3f14;
+          border: 2px solid #fc3f14;
+          padding: 10px 30px;
+          color: white;
+          text-transform: uppercase;
+          margin-top: 20px;
+          text-align: center;
+          transition: 0.3s all;
+          &:hover {
+            background-color: white;
+            color: #fc3f14;
+            border: 2px solid #fc3f14;
+            transition: 0.3s all;
+            cursor: pointer;
+          }
+
+          &.disabled {
+            background-color: #fc3f14;
+            opacity: 0.5;
+            border: 2px solid #fc3f14;
+            padding: 10px 30px;
+            color: white;
+            text-transform: uppercase;
+            margin-top: 20px;
+            text-align: center;
+            transition: 0.3s all;
+          }
+        }
+      }
     }
+  }
 }
