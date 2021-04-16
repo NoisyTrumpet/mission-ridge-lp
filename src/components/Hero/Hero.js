@@ -3,10 +3,11 @@ import PropTypes from 'prop-types'
 import { graphql, useStaticQuery } from "gatsby"
 import { getImage } from "gatsby-plugin-image"
 import { convertToBgImage } from "gbimage-bridge"
-
+import Fade from 'react-reveal/Fade';
 import BackgroundImage from "gatsby-background-image"
-import { Animated } from "react-animated-css"
+
 import HeroForm from "../HeroForm/HeroForm"
+import Social from "../Social/Social"
 import "./Hero.scss"
 
 const Hero = ({thankYou}) => {
@@ -44,20 +45,12 @@ const Hero = ({thankYou}) => {
         preserveStackingContent
       >
         <section className="hero-content">
-          <Animated
-            animationIn="fadeInUp"
-            animationOut="fadeOutDown"
-            isVisible={true}
-          >
-            <h1>Thank You!</h1>
-          </Animated>
-          <Animated
-            animationIn="fadeInUp"
-            animationOut="fadeOutDown"
-            isVisible={true}
-          >
-            <h3>Please be on the lookout for when we announce the winner by checking us out on social media</h3>
-          </Animated>
+          <Fade left cascade>
+          <h1>Thank You!</h1>
+          </Fade>
+
+        <h3>Please be on the lookout for when we announce the winner by checking us out on social media</h3>
+        <Social />
         </section>
       </BackgroundImage>
     </section>
@@ -75,18 +68,9 @@ const Hero = ({thankYou}) => {
           <HeroForm />
         </section>
         <section className="hero-content">
-          <Animated
-            animationIn="fadeInUp"
-            animationOut="fadeOutDown"
-          >
-            <h3>Coming Soon!</h3>
-          </Animated>
-          <Animated
-            animationIn="fadeInUp"
-            animationOut="fadeOutDown"
-          >
-            <h1>North Texas' Premier Shooting Range & Event Center</h1>
-          </Animated>
+          <Fade bottom><h3>Coming Soon!</h3><h1>North Texas' Premier Shooting Range & Event Center</h1></Fade>
+
+
         </section>
       </BackgroundImage>
     </section>

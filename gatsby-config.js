@@ -67,7 +67,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#FF54AC`,
         display: `minimal-ui`,
-        icon: `${__dirname}/static/images/favicon.ico`, // This path is relative to the root of the site.
+        icon: `static/images/favicon.ico`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-sass`,
@@ -76,6 +76,8 @@ module.exports = {
       options: {
         enableListener: true,
         preconnect: ["https://fonts.gstatic.com"],
+        /* Font loading mode */
+    mode: "async",
 
         web: [
           {
@@ -92,6 +94,6 @@ module.exports = {
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-offline`,
   ],
 }

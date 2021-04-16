@@ -2,6 +2,8 @@ import React, { useState } from "react"
 import addToMailchimp from "gatsby-plugin-mailchimp"
 import Interweave from "interweave"
 import { navigate } from "gatsby"
+import Fade from 'react-reveal/Fade';
+import Jump from 'react-reveal/Jump';
 import "./HeroForm.scss"
 
 const HeroForm = () => {
@@ -22,9 +24,8 @@ const HeroForm = () => {
     setServerState({ submitting: true })
 
     addToMailchimp(form.email.value, {
-      NAME: form.NAME.value,
-      FNAME: form.NAME.value.split(' ').length > 0 && form.NAME.value.split(' ')[0],
-      LNAME: form.NAME.value.split(' ').length > 0 ? form.NAME.value.split(' ')[1] : 'last name not entered'
+      FNAME: form.FNAME.value,
+      LNAME: form.LNAME.value
     })
       .then(response => {
         console.log(response)
@@ -58,16 +59,22 @@ const HeroForm = () => {
   return (
     <section className="hero-form">
       <div className="text">
+      <Jump delay={2000}>
         <h3><span>WIN A FREE</span> MEMBERSHIP & EARLY ACCESS TOUR!</h3>
+        </Jump>
         <p>
           Enter your information below to receive early access to the facility and enter to win a FREE Membership.
         </p>
       </div>
       <section className="membership-levels">
           <div className="title">
-              <h4>Gold Membership</h4>
+            <Fade top cascade>
+            <h4>Gold Membership</h4>
+            </Fade>
+
           </div>
           <div className="features">
+          <Fade left cascade>
               <ul>
                   <li>Priority Lane Reservations</li>
                   <li>
@@ -78,20 +85,34 @@ const HeroForm = () => {
                   </li>
                   <li>And much more!</li>
               </ul>
+              </Fade>
           </div>
       </section>
       <div className="form">
         <form onSubmit={handleOnSubmit}>
           <div className="fields">
-            <div className="name">
-              <label className="label label-name" htmlFor="NAME">
-                Name
+            <div className="name first">
+              <label className="label label-name" htmlFor="FNAME">
+                First Name
               </label>
               <input
                 className="input name-input"
-                id="name"
+                id="first-name"
                 type="name"
-                name="NAME"
+                name="FNAME"
+                required
+                onChange={handleChange}
+              />
+            </div>
+            <div className="name last">
+              <label className="label label-name" htmlFor="LNAME">
+                Last Name
+              </label>
+              <input
+                className="input name-input"
+                id="last-name"
+                type="name"
+                name="LNAME"
                 required
                 onChange={handleChange}
               />

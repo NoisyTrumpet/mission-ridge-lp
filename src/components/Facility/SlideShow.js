@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import { Animated } from "react-animated-css"
 import { GatsbyImage } from "gatsby-plugin-image";
 
 const SlideShow = () => {
@@ -39,16 +38,11 @@ const SlideShow = () => {
   })
 
   return (
-    <Animated
-      animationIn="fadeInUp"
-      animationOut="fadeOutDown"
-      isVisible={true}
-    >
       <GatsbyImage
         image={node.childImageSharp.gatsbyImageData}
         key={node.id}
         alt={node.name.replace(/-/g, " ").substring(2)} />
-    </Animated>
+
   );
 }
 
