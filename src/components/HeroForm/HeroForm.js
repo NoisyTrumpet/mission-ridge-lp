@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import addToMailchimp from "gatsby-plugin-mailchimp"
 import Interweave from "interweave"
+import { navigate } from "gatsby"
 import "./HeroForm.scss"
 
 const HeroForm = () => {
@@ -27,6 +28,7 @@ const HeroForm = () => {
     })
       .then(response => {
         console.log(response)
+
         if (response.result === "error") {
           if (response.msg.includes("Recipient")) {
             setServerState({
@@ -38,15 +40,19 @@ const HeroForm = () => {
             submitting: false,
             status: response.msg,
           })
+        } else {
+          navigate('/thank-you')
         }
         setServerState({
           submitting: false,
           status: response.msg,
         })
+
       })
       .catch(error => {
         console.log(error)
       })
+
   }
 
   return (
