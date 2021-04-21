@@ -50,6 +50,7 @@ const Hero = ({thankYou}) => {
           </Fade>
 
         <h3>Please be on the lookout for the winner announcement by checking us out on social media.</h3>
+        
         <Social />
         </section>
       </BackgroundImage>
@@ -69,8 +70,6 @@ const Hero = ({thankYou}) => {
         </section>
         <section className="hero-content">
           <Fade bottom><h3>Coming Soon!</h3><h1>North Texas' Premier Shooting Range & Event Center</h1></Fade>
-
-
         </section>
       </BackgroundImage>
     </section>

@@ -62,8 +62,8 @@ const HeroForm = () => {
       <Jump delay={2000}>
         <h3><span>WIN A FREE</span> MEMBERSHIP & EARLY ACCESS TOUR!</h3>
         </Jump>
-        <p>
-          Enter your information below to receive early access to the facility and enter to win a FREE Membership.
+        <p style={{ lineHeight: `25px` }}>
+        Enter your information below to receive early access to our new North Texas facility and enter to win a FREE Membership.
         </p>
       </div>
       <section className="membership-levels">
