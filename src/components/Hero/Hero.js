@@ -10,7 +10,7 @@ import HeroForm from "../HeroForm/HeroForm"
 import Social from "../Social/Social"
 import "./Hero.scss"
 
-const Hero = ({thankYou}) => {
+const Hero = ({thankYou, contact}) => {
   const placeHolderImage = useStaticQuery(
     graphql`
     query {
@@ -49,8 +49,8 @@ const Hero = ({thankYou}) => {
           <h1>Thank You!</h1>
           </Fade>
 
-        <h3>Please be on the lookout for the winner announcement by checking us out on social media.</h3>
-        
+        {contact ? <h3>We will contact you within 48 hours.</h3> : <h3>Please be on the lookout for the winner announcement by checking us out on social media.</h3>}
+
         <Social />
         </section>
       </BackgroundImage>
