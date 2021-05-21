@@ -10,7 +10,7 @@ import PropTypes from "prop-types"
 import { StaticQuery, graphql, Link } from "gatsby"
 
 import Header from "./header"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import "../../static/styles/main.scss"
 import YouTube from "./Social/Fragments/YouTube"
 import Facebook from "./Social/Fragments/Facebook"
@@ -30,7 +30,7 @@ const Layout = ({ children }) => (
     `}
     render={(data) => (
       <>
-        <SEO
+        <Seo
           title={data.site.siteMetadata.title}
           description={data.site.siteMetadata.description}
         />

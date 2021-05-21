@@ -32,27 +32,34 @@ input {
 ///
 @mixin inputPlaceholder() {
   $selector: '';
-  $prefixes: (
-      moz: "::-moz",
+  $prefixes: (moz: "::-moz",
       webkit: "::-webkit",
       ie: ":-ms"
-  );
-  @each $prop, $value in $prefixes {
-      @if $prop != "moz" {
-          $selector: #{$value}-input-placeholder;
-      } @else {
-          $selector: #{$value}-placeholder;
+    );
+
+  @each $prop,
+  $value in $prefixes {
+    @if $prop !="moz" {
+      $selector: #{$value}-input-placeholder;
+    }
+
+    @else {
+      $selector: #{$value}-placeholder;
+    }
+
+    @if & {
+      &#{$selector} {
+        @content;
       }
-      @if & {
-          &#{$selector} {
-              @content;
-          }
-      } @else {
-          #{$selector} {
-              @content;
-          }
+    }
+
+    @else {
+      #{$selector} {
+        @content;
       }
+    }
   }
+
   ::placeholder {
     @content;
   }
@@ -67,16 +74,19 @@ label {
   font-weight: 300;
   font-family: 'Open Sans';
 }
+
 textarea {
   min-height: 100px;
+
   @include inputPlaceholder() {
-      padding: 7px 0 0 20px ;
+    padding: 7px 0 0 20px;
   }
 }
 
 body {
   font-family: 'Open Sans';
   color: #797283;
+
   li {
     color: #797283;
   }
@@ -85,7 +95,12 @@ body {
     font-family: 'Open Sans';
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: 'industry';
     line-height: 43px;
     color: #1E1C21;
@@ -94,7 +109,8 @@ body {
   a {
     color: #702226;
 
-    &:hover, &:active {
+    &:hover,
+    &:active {
       color: #702226;
     }
   }
@@ -103,18 +119,22 @@ body {
     background-color: #222222;
     display: grid;
     padding: 20px 0;
+
     @media (max-width: 767px) {
       padding: 10px 0px;
-  }
+    }
+
     align-items: center;
 
     .logo {
       img {
         width: 200px;
         height: fit-content;
+
         @media (max-width: 500px) {
           width: 150px;
         }
+
         @media (max-width: 350px) {
           width: 130px;
         }
@@ -129,9 +149,11 @@ body {
       .get-started {
         a {
           text-transform: uppercase;
+
           @media (max-width: 767px) {
             width: 120px;
           }
+
           width: 160px;
           height: 47px;
           font-style: normal;
@@ -192,7 +214,8 @@ body {
       padding-top: 1px;
       padding-bottom: 50px;
 
-      h1, h2 {
+      h1,
+      h2 {
         padding-top: 0;
       }
 
@@ -309,9 +332,7 @@ body {
           margin: 0 auto;
         }
 
-        &:active {
-
-        }
+        &:active {}
       }
     }
 
@@ -379,7 +400,12 @@ body {
     margin: 0 auto;
     color: #1E1C21;
 
-    h1, h2, h3, h4, h5, h6 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
       font-family: 'Open Sans';
     }
 
@@ -392,7 +418,13 @@ body {
     }
 
     .content {
-      h1, h2, h3, h4, h5, h6 {
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
         margin: 0;
       }
 
@@ -405,6 +437,7 @@ body {
 
   footer {
     padding: 120px 0 45px;
+
     .container {
       display: grid;
       place-items: center;
@@ -413,6 +446,7 @@ body {
 
     .logo {
       width: 300px;
+
       img {
         width: 300px;
         max-width: 100%;
@@ -429,11 +463,11 @@ body {
 
     .social {
       display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-  gap: 0px 20px;
-  grid-template-areas:
-    ". . .";
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
+      gap: 0px 20px;
+      grid-template-areas:
+        ". . .";
     }
 
     @media screen and (max-width: $break-small) {
@@ -473,7 +507,8 @@ body {
               font-size: 14px;
               color: #797283;
 
-              &:hover, &:active {
+              &:hover,
+              &:active {
                 color: #702226;
               }
             }
@@ -521,9 +556,163 @@ body {
     .copyright {
       text-align: center;
 
-      margin-top: 31px!important;
+      margin-top: 31px !important;
 
       font-size: 13px;
+    }
+  }
+}
+
+.signup {
+  display: grid;
+  place-items: center;
+
+  .text {
+    text-align: center;
+
+    h3 {
+      text-transform: uppercase;
+      max-width: 90%;
+      margin: 20px auto 0 auto;
+    }
+
+    p {
+      @media (max-width: 767px) {
+        max-width: 80%;
+        margin: 0 auto;
+      }
+
+      text-align: center;
+    }
+  }
+
+  h5 {
+    text-align: center;
+    margin: 0;
+  }
+
+  .form {
+    @media (max-width: 767px) {
+      padding: 0px 20px;
+    }
+
+    max-width: 700px;
+    margin-top: 20px;
+
+    form {
+      p {
+        text-align: center;
+      }
+
+      .fields {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 0px 20px;
+        grid-template-areas: ". .";
+
+        .name {
+          .label {
+            margin-right: 15px;
+            text-transform: uppercase;
+
+            @media (max-width: 767px) {
+              display: block;
+              margin-bottom: 5px;
+            }
+          }
+
+          .input {
+            border: none;
+            background-color: #f1efef;
+            padding: 5px 0;
+          }
+        }
+
+        .lname {
+          .label {
+            margin-right: 15px;
+            text-transform: uppercase;
+
+            @media (max-width: 767px) {
+              display: block;
+              margin-bottom: 5px;
+            }
+          }
+
+          .input {
+            border: none;
+            background-color: #f1efef;
+            padding: 5px 0;
+          }
+        }
+      }
+
+      .email-wrapper {
+        display: grid;
+        margin-top: 20px;
+        grid-template-columns: 0.3fr 1.7fr;
+        grid-template-rows: 1fr;
+        gap: 0px 0px;
+        grid-template-areas: ". .";
+        align-items: center;
+
+        @media (max-width: 767px) {
+          display: block;
+        }
+
+        .label {
+          text-transform: uppercase;
+
+          @media (max-width: 767px) {
+            display: block;
+            margin-bottom: 5px;
+          }
+        }
+
+        .input {
+          border: none;
+          background-color: #f1efef;
+          padding: 5px 0;
+          width: 100%;
+        }
+      }
+
+      .button-wrapper {
+        display: grid;
+        place-items: center;
+
+        button {
+          background-color: #fc3f14;
+          border: 2px solid #fc3f14;
+          padding: 10px 30px;
+          color: white;
+          text-transform: uppercase;
+          margin-top: 20px;
+          text-align: center;
+          transition: 0.3s all;
+
+          &:hover {
+            background-color: white;
+            color: #fc3f14;
+            border: 2px solid #fc3f14;
+            transition: 0.3s all;
+            cursor: pointer;
+          }
+
+          &.disabled {
+            background-color: #fc3f14;
+            opacity: 0.5;
+            border: 2px solid #fc3f14;
+            padding: 10px 30px;
+            color: white;
+            text-transform: uppercase;
+            margin-top: 20px;
+            text-align: center;
+            transition: 0.3s all;
+          }
+        }
+      }
     }
   }
 }

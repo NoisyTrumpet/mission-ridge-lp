@@ -1,11 +1,11 @@
 import React from "react"
 
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 
 const PrivacyPage = () => (
   <Layout>
-    <SEO title="Privacy Policy" />
+    <Seo title="Privacy Policy" />
     <div className={"container"}>
       <div className={"content"}>
         <div className={"title"}>

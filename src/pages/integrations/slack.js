@@ -1,7 +1,7 @@
 import React from "react"
 
 import Layout from "../../components/layout"
-import SEO from "../../components/seo"
+import Seo from "../../components/seo"
 import SlackHiStaffImage from "../../../static/images/integration/slack-histaff.svg";
 import thumbnailEventWebhook from "../../../static/images/integration/slack-event-webhook.png";
 import thumbnailNewsWebhook from "../../../static/images/integration/slack-news-webhook.png";
@@ -11,7 +11,7 @@ import thumbnailGuid2 from "../../../static/images/integration/slack-guid-2.png"
 
 const AboutPage = () => (
     <Layout>
-        <SEO title="Slack Integration"/>
+        <Seo title="Slack Integration"/>
 
         <div className={"page-header"}>
             <img alt={"Slack"} src={SlackHiStaffImage}/>

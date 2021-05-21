@@ -79,7 +79,7 @@ const Form = () => {
             className="input input-select reason-input"
             name="REASON"
             required="required"
-            onChange={handleReason}
+            onBlur={handleReason}
           >
             <option disabled selected className="placeholder">
               Reason (Required)

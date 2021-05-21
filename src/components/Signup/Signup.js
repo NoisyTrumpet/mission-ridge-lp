@@ -25,7 +25,6 @@ const Signup = () => {
       LNAME: form.LNAME.value,
     })
       .then(response => {
-        console.log(response)
         if (response.result === "error") {
           if (response.msg.includes("Recipient")) {
             setServerState({
