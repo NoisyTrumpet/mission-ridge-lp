@@ -60,7 +60,7 @@ const HeroForm = () => {
     <section className="hero-form">
       <div className="text">
       <Jump delay={2000}>
-        <h3><span>WIN A FREE</span> MEMBERSHIP!</h3>
+        <h3><span>WIN A <br/>FREE</span> MEMBERSHIP!</h3>
         </Jump>
         <p style={{ lineHeight: `25px` }}>
         Enter your information below and enter to win a FREE membership.
