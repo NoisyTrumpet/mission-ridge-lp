@@ -5,7 +5,7 @@ import "./Picture.scss"
 
 const Picture = () => {
   const placeHolderImage = useStaticQuery(graphql`{
-    placeholderImage: file(relativePath: {eq: "rendering.png"}) {
+    placeholderImage: file(relativePath: {eq: "MRRA_Plano_Int_Ext-5-minified.jpg"}) {
     childImageSharp {
       gatsbyImageData(quality: 90, layout: FULL_WIDTH, placeholder: BLURRED)
     }
