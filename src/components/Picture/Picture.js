@@ -25,7 +25,7 @@ const image = getImage(placeHolderImage.placeholderImage)
       />
       <div>
         <p>
-          Coming Soon - North Texas' state-of-the-art, family-friendly shooting
+          North Texas' state-of-the-art, family-friendly shooting
           center and event venue. Our 30,000 square foot facility will offer
           pistol, rifle and archery ranges with a virtual training simulator and
           will feature 100-yard indoor shooting lanes! We invite everyone to
