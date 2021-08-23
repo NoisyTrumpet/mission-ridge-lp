@@ -69,7 +69,7 @@ const Hero = ({thankYou, contact}) => {
           <HeroForm />
         </section>
         <section className="hero-content">
-          <Fade bottom><h3>Coming Soon!</h3><h1>North Texas' Premier Shooting Range & Event Center</h1></Fade>
+          <Fade bottom><h3>Open Now!</h3><h1>North Texas' Premier Shooting Range & Event Center</h1></Fade>
         </section>
       </BackgroundImage>
     </section>
