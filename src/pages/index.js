@@ -7,7 +7,9 @@ import { Picture } from "../components/Picture"
 import { Facility } from "../components/Facility"
 
 const IndexPage = () => {
-  window.location.href = "https://www.missionridgerange.com/"
+  if (typeof window !== "undefined") {
+    window.location.href = "https://www.missionridgerange.com/"
+  }
   return (
     <Layout>
     <Hero />
