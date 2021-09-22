@@ -6,14 +6,17 @@ import { Contact } from "../components/Contact"
 import { Picture } from "../components/Picture"
 import { Facility } from "../components/Facility"
 
-const IndexPage = () => (
-  <Layout>
+const IndexPage = () => {
+  window.location.href = "https://www.missionridgerange.com/"
+  return (
+    <Layout>
     <Hero />
     {/* <Signup /> */}
     <Picture />
     <Facility />
     <Contact />
   </Layout>
-)
+  )
+}
 
 export default IndexPage
