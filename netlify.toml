@@ -2,3 +2,5 @@
 [[redirects]]
   from = "/"
   to = "https://www.missionridgerange.com/"
+  status = 301
+  force = true
