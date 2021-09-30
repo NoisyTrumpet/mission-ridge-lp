@@ -1,6 +1,6 @@
-# A basic redirect rule
-[[redirects]]
-  from = "/"
-  to = "https://www.missionridgerange.com/"
-  status = 301
-  force = true
+# # A basic redirect rule
+# [[redirects]]
+#   from = "/"
+#   to = "https://www.missionridgerange.com/"
+#   status = 301
+#   force = true
