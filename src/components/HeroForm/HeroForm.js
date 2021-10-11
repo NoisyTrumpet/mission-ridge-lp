@@ -2,7 +2,6 @@ import React, { useState } from "react"
 import addToMailchimp from "gatsby-plugin-mailchimp"
 import Interweave from "interweave"
 import { navigate } from "gatsby"
-import Fade from "react-reveal/Fade"
 import Jump from "react-reveal/Jump"
 import "./HeroForm.scss"
 

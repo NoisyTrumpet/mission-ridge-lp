@@ -22,7 +22,7 @@ const Card = ({ title, icon, details, subDetails, discount }) => {
   return (
     <div className="card">
       <div className="card-header">
-        {title && <p className="card-header-title heading">{title}</p>}
+        {title && <p className="card-header-title heading black">{title}</p>}
       </div>
       <div className="card-icon">{icon && <Icon icon={icon} />}</div>
       <div className="card-content">
