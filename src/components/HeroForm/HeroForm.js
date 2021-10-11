@@ -2,8 +2,8 @@ import React, { useState } from "react"
 import addToMailchimp from "gatsby-plugin-mailchimp"
 import Interweave from "interweave"
 import { navigate } from "gatsby"
-import Fade from 'react-reveal/Fade';
-import Jump from 'react-reveal/Jump';
+import Fade from "react-reveal/Fade"
+import Jump from "react-reveal/Jump"
 import "./HeroForm.scss"
 
 const HeroForm = () => {
@@ -25,7 +25,7 @@ const HeroForm = () => {
 
     addToMailchimp(form.email.value, {
       FNAME: form.FNAME.value,
-      LNAME: form.LNAME.value
+      LNAME: form.LNAME.value,
     })
       .then(response => {
         console.log(response)
@@ -42,51 +42,46 @@ const HeroForm = () => {
             status: response.msg,
           })
         } else {
-          navigate('/thank-you')
+          navigate("/thank-you")
         }
         setServerState({
           submitting: false,
           status: `Looks like you've already been entered to win. If you have any questions on memberships, joining our team or general questions please fill out the form at the bottom of the page.`,
         })
-
       })
       .catch(error => {
         console.log(error)
       })
-
   }
 
   return (
     <section className="hero-form">
       <div className="text">
-      <Jump delay={2000}>
-        <h3><span>WIN A FREE</span> MEMBERSHIP!</h3>
+        <Jump delay={2000}>
+          <h3>
+            <span>WIN A FREE</span> MEMBERSHIP!
+          </h3>
         </Jump>
         <p style={{ lineHeight: `25px` }}>
-        Enter your information below and enter to win a<br /> FREE membership.
+          Enter your information below and enter to win a<br /> FREE membership.
         </p>
       </div>
       <section className="membership-levels">
-          <div className="title">
-            <Fade top cascade>
+        <div className="title">
+          <Fade top cascade>
             <h4>Gold Membership</h4>
-            </Fade>
-
-          </div>
-          <div className="features">
+          </Fade>
+        </div>
+        <div className="features">
           <Fade left cascade>
-              <ul>
-                  <li>Priority Lane Reservations</li>
-                  <li>
-                      Complimentary Unlimited Shooting
-                  </li>
-                  <li>
-                      Retail & Training Discounts
-                  </li>
-                  <li>And much more!</li>
-              </ul>
-              </Fade>
-          </div>
+            <ul>
+              <li>Priority Lane Reservations</li>
+              <li>Complimentary Unlimited Shooting</li>
+              <li>Retail & Training Discounts</li>
+              <li>And much more!</li>
+            </ul>
+          </Fade>
+        </div>
       </section>
       <div className="form">
         <form onSubmit={handleOnSubmit}>
@@ -131,18 +126,18 @@ const HeroForm = () => {
               />
             </div> */}
             <div className="email-wrapper">
-            <label className="label label-email" htmlFor="email">
-              Email
-            </label>
-            <input
-              className="input email-input hero-form-input"
-              id="email"
-              type="email"
-              name="email"
-              required
-              onChange={handleChange}
-            />
-          </div>
+              <label className="label label-email" htmlFor="email">
+                Email
+              </label>
+              <input
+                className="input email-input hero-form-input"
+                id="email"
+                type="email"
+                name="email"
+                required
+                onChange={handleChange}
+              />
+            </div>
           </div>
 
           {!serverState.submitting && (

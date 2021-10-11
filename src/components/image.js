@@ -24,7 +24,7 @@ const Image = () => (
         }
       }
     `}
-    render={(data) => (
+    render={data => (
       <GatsbyImage
         image={data.placeholderImage.childImageSharp.gatsbyImageData}
       />

@@ -28,7 +28,7 @@ const Layout = ({ children }) => (
         }
       }
     `}
-    render={(data) => (
+    render={data => (
       <>
         <Seo
           title={data.site.siteMetadata.title}
@@ -54,12 +54,12 @@ const Layout = ({ children }) => (
 
             <div className={"about"}>
               <p style={{ color: "#333" }}>
-                North Texas' state-of-the-art, family-friendly
-                shooting center and event venue. Our 30,000 square foot facility
-                will offer pistol, rifle and archery ranges with a virtual
-                training simulator and will feature 100-yard indoor shooting
-                lanes! We invite everyone to experience our fun, safe,
-                world-class shooting facility!
+                North Texas' state-of-the-art, family-friendly shooting center
+                and event venue. Our 30,000 square foot facility will offer
+                pistol, rifle and archery ranges with a virtual training
+                simulator and will feature 100-yard indoor shooting lanes! We
+                invite everyone to experience our fun, safe, world-class
+                shooting facility!
               </p>
             </div>
 

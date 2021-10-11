@@ -6,11 +6,9 @@ function Logo(props) {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 548.05 93.03"
       {...props}
-      style={{marginBottom: '20px'}}
+      style={{ marginBottom: "20px" }}
     >
-      <defs>
-
-      </defs>
+      <defs></defs>
       <title>{"logo"}</title>
       <g id="prefix__Layer_2" data-name="Layer 2">
         <g id="prefix__Layer_1-2" data-name="Layer 1">

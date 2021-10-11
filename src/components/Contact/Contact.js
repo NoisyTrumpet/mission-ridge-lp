@@ -2,18 +2,19 @@ import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import "./Contact.scss"
 import Form from "./Form/Form"
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const Contact = () => {
-  const placeHolderImage = useStaticQuery(graphql`{
-    placeholderImage: file(relativePath: {eq: "map.png"}) {
-    childImageSharp {
-      gatsbyImageData(quality: 90, layout: FULL_WIDTH, placeholder: BLURRED)
+  const placeHolderImage = useStaticQuery(graphql`
+    {
+      placeholderImage: file(relativePath: { eq: "map.png" }) {
+        childImageSharp {
+          gatsbyImageData(quality: 90, layout: FULL_WIDTH, placeholder: BLURRED)
+        }
+      }
     }
-  }
-}
-`)
-const image = getImage(placeHolderImage.placeholderImage)
+  `)
+  const image = getImage(placeHolderImage.placeholderImage)
   return (
     <section className="contact-section">
       <div className="map-wrapper">
@@ -24,10 +25,10 @@ const image = getImage(placeHolderImage.placeholderImage)
             rel="noopener noreferrer"
           >
             <GatsbyImage
-        image={image}
-        alt="Mission Ridge-DFW Map"
-        imgStyle={{ position: "static" }}
-      />
+              image={image}
+              alt="Mission Ridge-DFW Map"
+              imgStyle={{ position: "static" }}
+            />
           </a>
         </div>
         <div className="cta">

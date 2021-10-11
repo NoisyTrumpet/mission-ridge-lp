@@ -1,0 +1,69 @@
+.card-deck {
+  padding: 2rem 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+
+  .title {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 2.6rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .card-grid {
+    display: grid;
+    gap: 10px;
+    grid-template: repeat(1, 1fr) / repeat(4, 1fr);
+    grid-auto-flow: row;
+    position: relative;
+
+    /* or 'row', 'row dense', 'column dense' */
+    .card {
+      background-color: #f3f1f1;
+      text-align: center;
+      padding: 2rem 15px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+
+      .card-header {
+        border-bottom: 2px solid #1e1c21;
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      .card-icon {
+        padding-bottom: 1rem;
+      }
+
+      .card-header-title {
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+
+      .card-content {
+        li {
+          color: #1e1c21;
+          margin: 1rem 0;
+        }
+
+        .bold {
+          font-weight: bold;
+          font-style: italic;
+        }
+
+        .card-content-details {
+          padding-bottom: 2rem;
+        }
+      }
+
+      .card-footer {
+        margin-top: auto;
+        color: #702226;
+        font-weight: bold;
+      }
+    }
+  }
+}

@@ -48,7 +48,7 @@ module.exports = {
         enableListener: true,
         preconnect: ["https://fonts.gstatic.com"],
         /* Font loading mode */
-    mode: "async",
+        mode: "async",
 
         web: [
           {

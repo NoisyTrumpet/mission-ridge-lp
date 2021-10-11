@@ -1,30 +1,30 @@
 import React from "react"
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types"
 import { graphql, useStaticQuery } from "gatsby"
 import { getImage } from "gatsby-plugin-image"
 import { convertToBgImage } from "gbimage-bridge"
-import Fade from 'react-reveal/Fade';
+import Fade from "react-reveal/Fade"
 import BackgroundImage from "gatsby-background-image"
 
 import HeroForm from "../HeroForm/HeroForm"
 import Social from "../Social/Social"
 import "./Hero.scss"
 
-const Hero = ({thankYou, contact}) => {
+const Hero = ({ thankYou, contact }) => {
   const placeHolderImage = useStaticQuery(
     graphql`
-    query {
-      placeholderImage: file(relativePath: { eq: "hero.png" }) {
-        childImageSharp {
-          gatsbyImageData(
-            width: 1920,
-            placeholder: BLURRED,
-            formats: [AUTO, WEBP, AVIF, PNG]
-          )
+      query {
+        placeholderImage: file(relativePath: { eq: "hero.png" }) {
+          childImageSharp {
+            gatsbyImageData(
+              width: 1920
+              placeholder: BLURRED
+              formats: [AUTO, WEBP, AVIF, PNG]
+            )
+          }
         }
       }
-    }
-`
+    `
   )
 
   const image = getImage(placeHolderImage.placeholderImage)
@@ -38,23 +38,30 @@ const Hero = ({thankYou, contact}) => {
   if (thankYou) {
     return (
       <section className="thankYou-hero">
-      <BackgroundImage
-        Tag="div"
-        className="hero-image"
-        fluid={backgroundFluidImageStack}
-        preserveStackingContent
-      >
-        <section className="hero-content">
-          <Fade left cascade>
-          <h1>Thank You!</h1>
-          </Fade>
+        <BackgroundImage
+          Tag="div"
+          className="hero-image"
+          fluid={backgroundFluidImageStack}
+          preserveStackingContent
+        >
+          <section className="hero-content">
+            <Fade left cascade>
+              <h1>Thank You!</h1>
+            </Fade>
 
-        {contact ? <h3>We will contact you within 48 hours.</h3> : <h3>Please be on the lookout for the winner announcement by checking us out on social media.</h3>}
+            {contact ? (
+              <h3>We will contact you within 48 hours.</h3>
+            ) : (
+              <h3>
+                Please be on the lookout for the winner announcement by checking
+                us out on social media.
+              </h3>
+            )}
 
-        <Social />
-        </section>
-      </BackgroundImage>
-    </section>
+            <Social />
+          </section>
+        </BackgroundImage>
+      </section>
     )
   }
   return (
@@ -69,21 +76,22 @@ const Hero = ({thankYou, contact}) => {
           <HeroForm />
         </section>
         <section className="hero-content">
-          <Fade bottom><h3>Now Open!</h3><h1>North Texas' Premier Shooting Range & Event Center</h1></Fade>
+          <Fade bottom>
+            <h3>Now Open!</h3>
+            <h1>North Texas' Premier Shooting Range & Event Center</h1>
+          </Fade>
         </section>
       </BackgroundImage>
     </section>
   )
-
-
 }
 
 Hero.defaultProps = {
-  thankYou: false
+  thankYou: false,
 }
 
 Hero.propTypes = {
-  thankYou: PropTypes.bool
+  thankYou: PropTypes.bool,
 }
 
 export default Hero
