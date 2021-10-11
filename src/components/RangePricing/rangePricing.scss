@@ -4,6 +4,12 @@
   margin: 0 auto;
   position: relative;
 
+  // Mobile
+  @media (max-width: 767px) {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
   .title {
     text-transform: uppercase;
     font-weight: bold;
@@ -18,6 +24,18 @@
     grid-template: repeat(1, 1fr) / repeat(4, 1fr);
     grid-auto-flow: row;
     position: relative;
+
+    // Tablet
+    @media (max-width: 767px) {
+      grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+      grid-gap: 1rem;
+    }
+
+    // Mobile
+    @media (max-width: 575px) {
+      grid-template: repeat(1, 1fr) / repeat(1, 1fr);
+      grid-gap: 1rem;
+    }
 
     /* or 'row', 'row dense', 'column dense' */
     .card {

@@ -59,14 +59,14 @@ const HeroForm = () => {
       <div className="text">
         <Jump delay={2000}>
           <h3>
-            <span>WIN A FREE</span> MEMBERSHIP!
+            <span>SIGN UP</span> FOR UPDATES, PROMOTIONS & EVENTS!
           </h3>
         </Jump>
-        <p style={{ lineHeight: `25px` }}>
+        {/* <p style={{ lineHeight: `25px` }}>
           Enter your information below and enter to win a<br /> FREE membership.
-        </p>
+        </p> */}
       </div>
-      <section className="membership-levels">
+      {/* <section className="membership-levels">
         <div className="title">
           <Fade top cascade>
             <h4>Gold Membership</h4>
@@ -82,7 +82,7 @@ const HeroForm = () => {
             </ul>
           </Fade>
         </div>
-      </section>
+      </section> */}
       <div className="form">
         <form onSubmit={handleOnSubmit}>
           <div className="fields">
