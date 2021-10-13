@@ -8,18 +8,19 @@ import { Picture } from "../components/Picture"
 import { Facility } from "../components/Facility"
 import RangePricing from "../components/RangePricing"
 import TrainingAcademy from "../components/TrainingAcademy"
+import { ImageSlider } from "../components/ImageSlider"
 
 const IndexPage = ({ data }) => {
   return (
     <Layout>
       <Hero />
-      {/* <Signup /> */}
       <Picture />
       <Facility />
       {/* Update October 2021 */}
       <RangePricing />
       {/* @TODO: Large Retails Store */}
       {/* @TODO: What's New */}
+      <ImageSlider />
       {/* Join Our Family */}
       <TrainingAcademy
         title="Training Academy Coming Soon!"

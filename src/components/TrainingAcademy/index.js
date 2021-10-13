@@ -7,7 +7,11 @@ const TrainingAcademy = ({ title, image }) => {
     <section className="training-academy">
       {image && title && (
         <div className="img-wrapper">
-          <GatsbyImage image={getImage(image)} alt={title} style={{ height: "100%", width: "100%" }}/>
+          <GatsbyImage
+            image={getImage(image)}
+            alt={title}
+            style={{ height: "100%", width: "100%" }}
+          />
         </div>
       )}
       <div className="container">

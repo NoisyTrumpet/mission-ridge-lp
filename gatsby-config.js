@@ -52,8 +52,7 @@ module.exports = {
 
         web: [
           {
-            file:
-              "https://fonts.googleapis.com/css2?family=Open+Sans&display=swap",
+            file: "https://fonts.googleapis.com/css2?family=Open+Sans&display=swap",
             name: "Open Sans",
           },
           {
