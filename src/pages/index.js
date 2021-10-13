@@ -5,6 +5,7 @@ import { Hero } from "../components/Hero"
 import { Contact } from "../components/Contact"
 import { Picture } from "../components/Picture"
 import { Facility } from "../components/Facility"
+import { ImageSlider } from "../components/ImageSlider"
 
 const IndexPage = () => {
   return (
@@ -13,6 +14,7 @@ const IndexPage = () => {
     {/* <Signup /> */}
     <Picture />
     <Facility />
+    <ImageSlider />
     <Contact />
   </Layout>
   )
