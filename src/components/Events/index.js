@@ -1,10 +1,10 @@
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import React from "react"
-import "./training.scss"
+import "./events.scss"
 
-const TrainingAcademy = ({ title, image }) => {
+const Events = ({ title, details, image }) => {
   return (
-    <section className="training-academy">
+    <section className="upcoming-events">
       {image && title && (
         <div className="img-wrapper">
           <GatsbyImage
@@ -18,10 +18,21 @@ const TrainingAcademy = ({ title, image }) => {
         <div className="title-wrapper">
           {title && <p className="title heading">{title}</p>}
         </div>
+        {details && <p class="details-body">{details}</p>}
+        <div className="button-wrapper">
+          <a
+            className="button"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.missionridgerange.com/join-us/"
+          >
+            <p className="heading">Learn More</p>
+          </a>
+        </div>
       </div>
       <div className="filter" />
     </section>
   )
 }
 
-export default TrainingAcademy
+export default Events

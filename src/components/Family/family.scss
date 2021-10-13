@@ -1,0 +1,110 @@
+.family-section {
+    margin: 3rem auto 4rem;
+
+  .title-heading {
+    padding: 0 2rem 1rem;
+    color: black;
+    font-family: "industry";
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 2.6rem;
+    text-align: center;
+    margin-bottom: 1rem;
+
+    @media (max-width: 767px) {
+    //   font-size: 1.5rem;
+      margin-left: 1rem;
+      padding: 2rem 0 2rem 1rem;
+    }
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    max-width: 1200px;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+
+    @media (max-width: 767px) {
+        flex-direction: column;
+    }
+  }
+
+  .img-wrapper {
+    width: 40%;
+
+    @media (max-width: 767px) {
+        width: 100%;
+    }
+  }
+
+  .cta {
+    width: 50%;
+    color: black;
+
+    @media (max-width: 767px) {
+        width: 90%;
+        margin: 1rem;
+    }
+
+    p {
+        margin-bottom: 1rem;
+
+        @media (max-width: 767px) {
+            text-align: center;
+        }
+
+        span {
+            font-weight: 800;
+        }
+    }
+
+    .button-wrapper {
+      display: grid;
+      place-items: start;
+      margin-top: 1rem;
+
+      @media (max-width: 767px) {
+        place-items: center;
+      }
+
+      .button {
+        background-color: #702226;
+        border: 2px solid #702226;
+        padding: 10px 30px;
+        color: white;
+        text-transform: uppercase;
+        margin-top: 20px;
+        text-align: center;
+        transition: 0.3s all;
+
+        p {
+          font-size: 1.2rem;
+          font-weight: 800;
+          margin-bottom: 0;
+        }
+
+        &:hover {
+          background-color: white;
+          color: #702226;
+          border: 2px solid #702226;
+          transition: 0.3s all;
+          cursor: pointer;
+        }
+
+        &.disabled {
+          background-color: #702226;
+          opacity: 0.5;
+          border: 2px solid #702226;
+          padding: 10px 30px;
+          color: white;
+          text-transform: uppercase;
+          margin-top: 20px;
+          text-align: center;
+          transition: 0.3s all;
+        }
+      }
+    }
+  }
+}
