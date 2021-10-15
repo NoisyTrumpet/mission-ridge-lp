@@ -1,13 +1,32 @@
 import React from "react"
 import SlideShow from "./SlideShow.js"
 import "./Facility.scss"
+import "../ImageSlider/ImageSlider.scss"
 
 const Facility = () => {
   return (
     <section className="facility">
-      <div className="imgGrid">
-        <SlideShow />
-      </div>
+      <section className="imageSlider">
+        <div className="swiperContainer">
+          <SlideShow />
+          <div className="prev swiper-button-prev">
+            <svg x="0px" y="0px" viewBox="0 0 15.9 31.6">
+              <polygon
+                class="st0"
+                points="15.9,31.6 15.9,23.7 8,15.8 15.9,7.9 15.9,0 0,15.8 "
+              />
+            </svg>
+          </div>
+          <div className="next swiper-button-next">
+            <svg x="0px" y="0px" viewBox="0 0 15.9 31.6">
+              <polygon
+                class="st0"
+                points="0,0 0,7.9 8,15.8 0,23.7 0,31.6 15.9,15.8 "
+              />
+            </svg>
+          </div>
+        </div>
+      </section>
 
       <div className="perks-sect">
         <h4>Inside our 30,000 sq ft facility</h4>

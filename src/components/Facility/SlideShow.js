@@ -1,16 +1,18 @@
-import React, { useState, useEffect } from "react"
+import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
+import { Navigation, A11y } from "swiper"
+import { Swiper, SwiperSlide } from "swiper/react"
+
+import "swiper/css"
+import "swiper/css/navigation"
+import "swiper/css/a11y"
 
 const SlideShow = () => {
-  const [index, setIndex] = useState(0)
   const { allFile } = useStaticQuery(
     graphql`
       {
-        allFile(
-          sort: { fields: name, order: DESC }
-          filter: { relativeDirectory: { eq: "Facility" } }
-        ) {
+        allFile(filter: { relativeDirectory: { eq: "Facility" } }) {
           edges {
             node {
               id
@@ -25,25 +27,34 @@ const SlideShow = () => {
     `
   )
 
-  const length = allFile.edges.length - 1
-  const handleNext = () =>
-    index === length ? setIndex(0) : setIndex(index + 1)
-  // const handlePrevious = () =>
-  //   index === 0 ? setIndex(length) : setIndex(index - 1)
-  const { node } = allFile.edges[index]
-
-  useEffect(() => {
-    const timeout = setTimeout(() => handleNext(), 3000)
-
-    return () => clearTimeout(timeout)
+  const images = allFile.edges.map(({ node }) => {
+    return (
+      <SwiperSlide key={node.id}>
+        <GatsbyImage
+          image={node.childImageSharp.gatsbyImageData}
+          alt={node.name}
+        />
+      </SwiperSlide>
+    )
   })
 
   return (
-    <GatsbyImage
-      image={node.childImageSharp.gatsbyImageData}
-      key={node.id}
-      alt={node.name.replace(/-/g, " ").substring(2)}
-    />
+    <Swiper
+      modules={[Navigation, A11y]}
+      spaceBetween={30}
+      slidesPerView={3}
+      navigation={{
+        prevEl: ".prev",
+        nextEl: ".next",
+      }}
+      breakpoints={{
+        320: { slidesPerView: 1 },
+        768: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 },
+      }}
+    >
+      {images}
+    </Swiper>
   )
 }
 

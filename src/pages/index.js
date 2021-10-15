@@ -20,10 +20,7 @@ const IndexPage = ({ data }) => {
       <Facility />
       {/* Update October 2021 */}
       <RangePricing />
-      {/* @TODO: Large Retails Store */}
-      {/* @TODO: What's New */}
       <ImageSlider />
-      {/* Join Our Family */}
       <Events
         title="What's New At MRRA"
         details="Keep up to date on everything happening at Mission Ridge Range & Academy including firearm & archery dealer days, promotions and events!"
@@ -34,6 +31,7 @@ const IndexPage = ({ data }) => {
         title="Training Academy Coming Soon!"
         image={data.trainingImage.childImageSharp}
       />
+      {/* Update October 2021 */}
       <Contact />
     </Layout>
   )
