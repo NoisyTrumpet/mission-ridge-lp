@@ -4,6 +4,10 @@
   margin: 0 auto;
   position: relative;
 
+  .bold {
+    font-weight: bold;
+  }
+
   // Mobile
   @media (max-width: 1200px) {
     padding-left: 1rem !important;
@@ -69,7 +73,6 @@
 
         .bold {
           font-weight: bold;
-          font-style: italic;
         }
 
         .card-content-details {

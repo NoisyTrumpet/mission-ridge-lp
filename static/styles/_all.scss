@@ -72,7 +72,7 @@ label {
 @include inputPlaceholder() {
   color: #797283;
   font-weight: 300;
-  font-family: 'Open Sans';
+  font-family: 'Open Sans', sans-serif;
 }
 
 textarea {
@@ -84,7 +84,7 @@ textarea {
 }
 
 body {
-  font-family: 'Open Sans';
+  font-family: 'Open Sans', sans-serif;
   color: #797283;
 
   li {
@@ -92,7 +92,7 @@ body {
   }
 
   p {
-    font-family: 'Open Sans';
+    font-family: 'Open Sans', sans-serif;
   }
 
   h1,
@@ -347,7 +347,7 @@ body {
     .call-to-action__content {
       h2 {
         font-size: 36px;
-        font-family: 'Open Sans';
+        font-family: 'Open Sans', sans-serif;
         font-weight: 600;
         margin: 0 0 32px;
         color: #ffffff;
@@ -414,7 +414,7 @@ body {
     h4,
     h5,
     h6 {
-      font-family: 'Open Sans';
+      font-family: 'Open Sans', sans-serif;
     }
 
     .title {
@@ -501,7 +501,7 @@ body {
           font-size: 14px;
           font-weight: bold;
           text-transform: uppercase;
-          font-family: 'Open Sans';
+          font-family: 'Open Sans', sans-serif;
           line-height: 0;
         }
 

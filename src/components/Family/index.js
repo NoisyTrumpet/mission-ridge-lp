@@ -18,10 +18,9 @@ const Family = ({ description, cta, image, title }) => {
           <p>
             <span className="heading">A Membership Level for everyone!</span>{" "}
             Becoming a member at Mission Ridge Range & Academy maximizes your
-            experience by offering complimentary range fees, carious discounts
+            experience by offering complimentary range fees, various discounts
             and the opportunity to 'advance your sport'!
           </p>
-          <p>Learn More about membership pricing....</p>
           <div className="button-wrapper">
             <a
               className="button"
