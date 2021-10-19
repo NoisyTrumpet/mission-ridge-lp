@@ -28,8 +28,8 @@ const Picture = () => {
       />
       <div>
         <p>
-          North Texas' state-of-the-art, family-friendly shooting center and
-          event venue. Our 30,000 square foot facility will offer pistol, rifle
+          Plano / Richardson’s state-of-the-art, family-friendly shooting center
+          and event venue. Our 30,000 square foot facility offers pistol, rifle
           and archery ranges with a virtual training simulator and will feature
           100-yard indoor shooting lanes! We invite everyone to experience our
           fun, safe, world-class shooting facility!

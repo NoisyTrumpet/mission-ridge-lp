@@ -1,6 +1,6 @@
 export const data = [
   {
-    title: "17 & 25 Yard Gun Range",
+    title: "25 Yard Gun Range",
     icon: "target",
     details: [
       {
@@ -25,7 +25,7 @@ export const data = [
     discount: "10% OFF Military & First Responders",
   },
   {
-    title: "100 Yard Gun Range",
+    title: "100 Yard Indoor Range",
     icon: "target",
     details: [
       {

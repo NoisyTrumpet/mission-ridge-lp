@@ -71,18 +71,25 @@
           margin: 1rem 0;
         }
 
+        color: #1e1c21 !important;
+
         .bold {
           font-weight: bold;
         }
 
         .card-content-details {
-          padding-bottom: 2rem;
+          padding-bottom: 1rem;
         }
       }
 
       .card-footer {
+        padding-top: 1rem;
         margin-top: auto;
-        color: #702226;
+
+        li {
+          color: #702226 !important;
+        }
+
         font-weight: bold;
       }
     }

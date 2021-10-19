@@ -78,7 +78,7 @@ const Hero = ({ thankYou, contact }) => {
         <section className="hero-content">
           <Fade bottom>
             <h3>Now Open!</h3>
-            <h1>North Texas' Premier Shooting Range & Event Center</h1>
+            <h1>Plano / Richardson’s Premier Shooting Range & Event Center</h1>
           </Fade>
         </section>
       </BackgroundImage>

@@ -45,7 +45,7 @@ const ImageSlider = () => {
   return (
     <section className="imageSlider">
       <div className="swiperHeader">
-        <h4>Large Retail Store</h4>
+        <h4>Fully Stocked Retail Store</h4>
         <p>
           Shop the best brands of guns, accessories, ammunition and all your
           archery needs!

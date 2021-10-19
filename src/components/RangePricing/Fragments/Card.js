@@ -35,18 +35,18 @@ const Card = ({ title, icon, details, subDetails, discount }) => {
           </ul>
         </div>
         <div className="card-content-sub-details">
-          <ul>
-            {subDetails &&
-              subDetails.map((subDetail, index) => (
-                <li key={index} className={subDetail.bold && "bold"}>
-                  {subDetail.content}
-                </li>
-              ))}
-          </ul>
+          {discount && <p className="card-footer-discount">{discount}</p>}
         </div>
       </div>
       <div className="card-footer">
-        {discount && <p className="card-footer-discount">{discount}</p>}
+        <ul>
+          {subDetails &&
+            subDetails.map((subDetail, index) => (
+              <li key={index} className={subDetail.bold && "bold"}>
+                {subDetail.content}
+              </li>
+            ))}
+        </ul>
       </div>
     </div>
   )

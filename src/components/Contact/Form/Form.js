@@ -13,8 +13,8 @@ const Form = () => {
     <section className="signup">
       <div className="text">
         <h3>
-          If you have any questions on memberships, joining our team or general
-          questions please fill out the form below!
+          If you have any questions about memberships, joining our team or
+          anything else, please fill out the form below!
         </h3>
         <p>We will contact you within 48 hours.</p>
       </div>
