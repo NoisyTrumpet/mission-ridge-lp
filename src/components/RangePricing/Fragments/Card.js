@@ -42,7 +42,7 @@ const Card = ({ title, icon, details, subDetails, discount }) => {
         <ul>
           {subDetails &&
             subDetails.map((subDetail, index) => (
-              <li key={index} className={subDetail.bold && "bold"}>
+              <li key={index} className={subDetail.bold && "bold" || subDetail.color === 'black' && 'black'}>
                 {subDetail.content}
               </li>
             ))}

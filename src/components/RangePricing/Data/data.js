@@ -15,6 +15,7 @@ export const data = [
     subDetails: [
       {
         content: "(Max 4 People Per Lane)",
+        color: 'black',
         bold: false,
       },
       {
@@ -40,6 +41,7 @@ export const data = [
     subDetails: [
       {
         content: "(Max 4 People Per Lane)",
+        color: 'black',
         bold: false,
       },
       {
